@@ -105,13 +105,20 @@ class Classroom:
         """
         #This code is provided for you.
         for i in range(0, size):
-            test_questions.add(input("Enter the question for question", str(i+1), ":"))
+            questions.append(
+                input("Enter the question for question " + str(i + 1) + ":"))
             for j in range(1, 5):
-                answer = input("Enter an answer OPTION for question", str(i+1), ", Choice", str(j), ": ")
-                test_questions[i] += "\n Choice {j}: " + str(answer)
-            test_answers.add(int(input("Enter the answer for question", str(i + 1), "(enter a number for 1, 2, 3, or 4): ")))
-            while test_answers[i] < 1 or test_answers[i] > 4:
-                test_answers[i] = int(input("Enter the answer for question", str(i + 1), "(enter a number for 1, 2, 3, or 4): "))
+                ansOption = input("Enter an answer OPTION for question " +
+                               str(i + 1) + ", Choice" + str(j) + ": ")
+                questions[i] += "\n Choice " + str(j) + ": " + str(ansOption)
+            answers.append(
+                int(
+                    input("Enter the correct answer for question " + str(i + 1) +
+                          "(enter a number for 1, 2, 3, or 4): ")))
+            while answers[i] < 1 or answers[i] > 4:
+                answers[i] = int(
+                    input("Enter the correct answer for question " + str(i + 1) +
+                          "(enter a number for 1, 2, 3, or 4): "))
         
         """
          * 3: Create another for loop that iterates through each STUDENT
