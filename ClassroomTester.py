@@ -26,8 +26,8 @@ class Student:
         points_gained = 0
         
         if is_manual:
-            #Simulate taking a real given test by looping through each question.
-            #Update the amount of points the student gains with each question.
+            #Simulate taking a real given test by looping through each question and asking the user for their answer on each question.
+            #Update the amount of points the student gains with each correct answer that the user responds with.
             """
             NOTE: If the student gets an answer wrong, nothing happens. They
             do not gain points, but they should not lose any either.
