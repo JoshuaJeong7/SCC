@@ -11,10 +11,7 @@ class Student:
 	cumulative_score: The total amount of points this student has received across all tests they've taken
 	total_tests_taken: The total number of tests this student has taken
     """
-    def __init__(self, name_in):
-        self.name = name_in
-        self.cumulative_score = 0
-        self.total_tests_taken = total_tests
+    
     def __init__(self, name_in, total_score=0, total_tests=0):
         self.name = name_in
         self.cumulative_score = total_score
