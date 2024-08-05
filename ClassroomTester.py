@@ -26,7 +26,7 @@ class Student:
         points_gained = 0
         
         if is_manual:
-            #Simulate taking a real given test by loooping through each question.
+            #Simulate taking a real given test by looping through each question.
             #Update the amount of points the student gains with each question.
             """
             NOTE: If the student gets an answer wrong, nothing happens. They
