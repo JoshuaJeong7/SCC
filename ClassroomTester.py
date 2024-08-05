@@ -60,27 +60,72 @@ class Classroom:
         self.average_grade = average_class_percent
 
     def assign_test(self, size, passing_grade):
+        
+        #INSTRUCTIONS FOR WRITING THIS METHOD:
+        
+         
+        """
+         * 1: Create three new lists. Two of these lists have a size of the
+         *         "size" parameter and represent each question on the test,
+         *         and that question's answer represented by an INTEGER. The 
+         *         third list has a size equal to the size of the "students" list 
+         *         and represents the grade of each student for this test.
+        """
         print(f"CREATING NEW TEST WITH {size} QUESTIONS")
+        #Add your lists here
         
-        test_questions = [""] * size
-        test_answers = [0] * size
-        
-        for i in range(size):
-            test_questions[i] = input(f"Enter the question for question {i + 1}: ")
+        """
+         * 2: [COMPLETE] Use a for loop that iterates through each question on the test.
+         *         Inside this loop, ask for what the question states, and what
+         *         each answer is. NOTE THAT EVERY QUESTION IS MULTIPLE CHOICE!
+         *         This means that for EVERY question, you must provide an answer
+         *         for each number, THEN provide the number for the CORRECT number.
+         *         Obtain the question and answers from the user input, then
+         *         store each question and answer into the corresponding index of
+         *         the questions list and answers list.
+        """
+        #This code is provided for you.
+        for i in range(0, size):
+            test_questions.add(input("Enter the question for question", str(i+1), ":"))
             for j in range(1, 5):
-                answer = input(f"Enter an answer OPTION for question {i + 1}, Choice {j}: ")
-                test_questions[i] += f" \n Choice {j}: {answer}"
+                answer = input("Enter an answer OPTION for question", str(i+1), ", Choice", str(j), ": ")
+                test_questions[i] += "\n Choice {j}: " + str(answer)
+            test_answers.add(int(input("Enter the answer for question", str(i + 1), "(enter a number for 1, 2, 3, or 4): ")))
             while test_answers[i] < 1 or test_answers[i] > 4:
-                test_answers[i] = int(input(f"Enter the answer for question {i + 1} (enter a number for 1, 2, 3, or 4): "))
+                test_answers[i] = int(input("Enter the answer for question", str(i + 1), "(enter a number for 1, 2, 3, or 4): "))
         
-        print("\nTEST RESULTS")
-        for student in self.students:
-            if student is not None:
-                grade = student.take_test(test_questions, test_answers, self.average_grade, False)
-                print(f"{student.name} scored {grade} and {'passed' if grade >= passing_grade else 'did not pass'}.")
+        """
+         * 3: Create another for loop that iterates through each STUDENT
+         *         in the classroom.
+         *             
+         *         This for loop will make each of them take
+         *         the test, as seen in the Student class's function. 
+         * 
+         *         You may choose how many students automate the test and how 
+         *         many students manually take the test. However, it is highly 
+         *         recommended that ONLY ONE student manually takes the test, 
+         *         and every other student will automate the test. 
+         * 
+         *         You can control who manually and automatically takes the test 
+         *         by passing in either a true(manual) or false(automatic) 
+         *         boolean variable into the takeTest method, 
+         *         as described in the Student class.
+        """
+        #Add your code here
 
-        # Calculate and print the average test score
-        # Update the average class grade
+        """
+         * 4: Print the grades that each student got on the test, and print
+         *         which students have passed or not passed based on if their
+         *         test grade meets the passing grade.
+        """
+        print("\nTEST RESULTS")
+        #Add your code here for printing each student's grade
+        
+        # 5: Calculate and print the average test score
+        # This part is left for implementation
+
+
+        # 6: Update the average class grade
         # This part is left for implementation
 
     def add_student(self, name, total_test_score=0, num_tests=0):
@@ -89,7 +134,7 @@ class Classroom:
     def remove_student(self, name):
         found_student = False
         for student in self.students:
-            if student is not None and student.name == name:
+            if student.name == name:
                 found_student = True
                 students.remove(student)
                 break
