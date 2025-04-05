@@ -1,5 +1,56 @@
 import random
 
+print("Imagine you are a teacher in a classroom. This program models the classroom environment, "
+          "including keeping track of the number of students in the classroom, their grades, and assigning "
+          "tests to change the grades of each student. This classroom is created with a default average class "
+          "grade and starts with no students inside the classroom. Across the program, you can choose to add new "
+          "students or remove underperforming students from the classroom. The primary feature of this program is "
+          "the ability to create Multiple Choice tests for every student to fill out. One of these students will "
+          "fill the test out manually, while the rest of the students fill it out automatically. At the end of the "
+          "test, the overall grade average for that test will be printed. Have fun!")
+
+
+classroom = Classroom() 
+#If this line is causing errors, then copy from where it says "1111" to where it says "0000",
+#and move all lines of code in between those two lines to the second line of the code, below 'import random'.
+user_input = 0
+while user_input != -1:
+    user_input = int(input("What would you like to do with your classroom? (enter number)\n1) Add new student \n2) Remove existing student \n3) Assign a new test \n4) Get the class average \n5) Get the list of all students in the classroom \n(Enter -1 to quit): "))
+        
+    if user_input == 1:
+        name = input("What is the name of this new student? ")
+        tests_taken = int(input("How many tests has this student taken? "))
+        average_grade = 0
+        while average_grade < 1 or average_grade > 100:
+            average_grade = int(input("What is this student's grade average? (enter number between 1-100): "))
+        total_test_score = tests_taken * average_grade
+        classroom.add_student(name, total_test_score, tests_taken)
+        
+    elif user_input == 2:
+        if len(classroom.students) == 0:
+            print("No students to remove")
+        else:
+            target_name = input("What is the name of the student to remove? ")
+            classroom.remove_student(target_name)
+        
+    elif user_input == 3:
+        size = int(input("How many questions are on this test? "))
+        passing_grade = 0
+        while passing_grade < 1 or passing_grade > 100:
+            passing_grade = int(input("What is the passing grade on this test? (enter number between 1-100): "))
+        classroom.assign_test(size, passing_grade)
+        
+    elif user_input == 4:
+        print(f"Average class grade: {classroom.average_grade}")
+        
+    elif user_input == 5:
+        for student in classroom.students:
+            if student is not None:
+                print(f"Name: {student.name}\t Grade: {student.return_average_grade()}")
+
+
+
+
 class Student:
     """
       NOTE TO STUDENTS: This class has all attributes and methods completed,
@@ -66,6 +117,7 @@ class Student:
         
         return #Finish the return value!
 
+""" 1111 """
 class Classroom:
     """
       This class has all attributes and constructors fully complete.
@@ -168,50 +220,4 @@ class Classroom:
         if not found_student:
             print("Unable to find student with name ", name)
 
-
-print("Imagine you are a teacher in a classroom. This program models the classroom environment, "
-          "including keeping track of the number of students in the classroom, their grades, and assigning "
-          "tests to change the grades of each student. This classroom is created with a default average class "
-          "grade and starts with no students inside the classroom. Across the program, you can choose to add new "
-          "students or remove underperforming students from the classroom. The primary feature of this program is "
-          "the ability to create Multiple Choice tests for every student to fill out. One of these students will "
-          "fill the test out manually, while the rest of the students fill it out automatically. At the end of the "
-          "test, the overall grade average for that test will be printed. Have fun!")
-
-classroom = Classroom()
-user_input = 0
-while user_input != -1:
-    user_input = int(input("What would you like to do with your classroom? (enter number)\n1) Add new student \n2) Remove existing student \n3) Assign a new test \n4) Get the class average \n5) Get the list of all students in the classroom \n(Enter -1 to quit): "))
-        
-    if user_input == 1:
-        name = input("What is the name of this new student? ")
-        tests_taken = int(input("How many tests has this student taken? "))
-        average_grade = 0
-        while average_grade < 1 or average_grade > 100:
-            average_grade = int(input("What is this student's grade average? (enter number between 1-100): "))
-        total_test_score = tests_taken * average_grade
-        classroom.add_student(name, total_test_score, tests_taken)
-        
-    elif user_input == 2:
-        if len(classroom.students) == 0:
-            print("No students to remove")
-        else:
-            target_name = input("What is the name of the student to remove? ")
-            classroom.remove_student(target_name)
-        
-    elif user_input == 3:
-        size = int(input("How many questions are on this test? "))
-        passing_grade = 0
-        while passing_grade < 1 or passing_grade > 100:
-            passing_grade = int(input("What is the passing grade on this test? (enter number between 1-100): "))
-        classroom.assign_test(size, passing_grade)
-        
-    elif user_input == 4:
-        print(f"Average class grade: {classroom.average_grade}")
-        
-    elif user_input == 5:
-        for student in classroom.students:
-            if student is not None:
-                print(f"Name: {student.name}\t Grade: {student.return_average_grade()}")
-
-
+""" 0000 """
