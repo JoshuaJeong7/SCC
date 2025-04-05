@@ -11,7 +11,7 @@ print("Imagine you are a teacher in a classroom. This program models the classro
 
 
 classroom = Classroom() 
-#If this line is causing errors, then copy from where it says "1111" to where it says "0000",
+#If the line above is causing errors, then copy from where it says "1111" to where it says "0000",
 #and move all lines of code in between those two lines to the second line of the code, below 'import random'.
 user_input = 0
 while user_input != -1:
