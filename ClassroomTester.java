@@ -1,3 +1,24 @@
+/**
+ * UNIT: Objects and Classes (Intermediate Java)
+ * 
+ * COMPLETED CLASSES:
+ * ClassroomTester.java
+ * 
+ * ASSESSED CLASSES:
+ * Classroom.java
+ * Student.java
+ * 
+ * ASSESSMENT ON: 
+ * -The ability to manipulate attributes and create methods within a class
+ * -The knowledge of how to flush the input stream (i.e. nextLine() after nextInt())
+ * 
+ * NOT ASSESSED AT ALL:
+ * -The knowledge or usage of several library classes, such as javax.swing
+ * -The knowledge and understanding of the concept of inheritance
+ * -The ability to use classes and inherited classes from client classes
+ *         that are outside of the target class's hierarchy
+ * 
+ */
 import java.util.Scanner;
 public class ClassroomTester {
     public static void main(String[] args) {
