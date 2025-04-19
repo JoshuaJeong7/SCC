@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * UNIT: Methods and Arrays
+ * UNIT: Methods and Arrays (Intro/Intermediate Java)
  * 
  * ASSESSMENT ON: 
  * -Ability to create and use methods with parameters to manipulate data into
