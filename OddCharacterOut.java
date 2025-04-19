@@ -1,3 +1,20 @@
+/**
+ * UNIT: Using if statements (Intro to Java)
+ * 
+ * ASSESSMENT ON: 
+ * -Ability to adapt flexibly to new situations with the Scanner class by
+ * taking in a char as the user input
+ * -Ability to use if statements to check the winning condition
+ * -Ability to use the indexOf function with Strings
+ * 
+ * NOT ASSESSED AT ALL:
+ * -Ability to generally create and set up the Scanner class
+ * -The usage of methods
+ * -The knowledge of ASCII and its relationship with char values
+ * -While loops
+ * -Creating the generated random line itself (involves loops, booleans, if statements, Math.random)
+ * 
+ */
 import java.util.Scanner;
 public class OddCharacterOut {
 	public static void main(String[] args) {
