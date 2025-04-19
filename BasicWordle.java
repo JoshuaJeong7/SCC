@@ -51,8 +51,8 @@ public class BasicWordle {
         
         
         String[] guesses; //FINISH INITIALIZING THE ARRAY!
-        guesses = new String[6];
-        //the following code is what the students have to fill in
+        
+        
         for (int i = 0; i < guesses.length; i++)
             guesses[i] = new String("     ");
         
@@ -80,18 +80,17 @@ public class BasicWordle {
         
         for (int i = 0; i < guesses.length; i++) {
             System.out.println("Guess " + (i + 1) + "/" + guesses.length);
-            do {
-                System.out.println("Enter a 5 letter word for your guess:");
-                guesses[i] = in.nextLine();
-            } while (guesses[i].length() != 5);
+         //PROMPT THE USER TO GUESS A WORD
+         //If the user enters an invalid word, keep asking them until they enter a valid word
+         //Type your code below:
             
             printAllGuesses(guesses, word);
             System.out.println();
             
-            if (guesses[i].equals(word)) {
-                System.out.println("You guessed the correct word!!!");
-                break;
-            }
+            //Check if the user guessed the word
+          //Type your code below:
+
+         
         }
         
         System.out.println("GAME OVER - The letter was " + word);
@@ -102,41 +101,20 @@ public class BasicWordle {
      */
     public static void printAllGuesses(String[] guesses, String correctWord) {
 
-        //NOTE: When the students receive the code, this is all they see
+        //NOTE: When the students receive the code, this is all they will receive
         //inside the method:
-        //for (int i = 0; i < guesses.length; i++) {
-        //    //Print all green letters
-        //    for (int a = 0; a < 5; a++) {
-        //        System.out.print("•");
-        //    }
-        //
-        //    System.out.print("  ");
-        //
-        //    //Print all yellow letters
-        //    for (int a = 0; a < 5; a++) {
-        //
-        //    }
-        //}
         for (int i = 0; i < guesses.length; i++) {
-            
             //Print all green letters
             for (int a = 0; a < 5; a++) {
-                if (guesses[i].charAt(a) == correctWord.charAt(a) )
-                    System.out.print(correctWord.charAt(a));
-                else
-                    System.out.print("•");
+                System.out.print("•");
             }
-            
+        
             System.out.print("  ");
-            
+        
             //Print all yellow letters
             for (int a = 0; a < 5; a++) {
-                String currLetter = guesses[i].substring(a, a+1);
-                if (correctWord.indexOf(currLetter) > -1)
-                System.out.print(currLetter);
+        
             }
-            
-            System.out.println();
         }
     }
 
