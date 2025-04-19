@@ -1,4 +1,28 @@
 import java.util.Scanner;
+/**
+ * UNIT: Loops (Intro to Java)
+ * 
+ * ASSESSMENT ON: 
+ * -Ability to adapt flexibly to new situations with the Scanner class by
+ * only using user input to confirm a decision instead of asking for a specific
+ * value to input into a variable
+ * -Ability to use loops to continue to loop the game
+ * -Working knowledge of booleans to keep the loop active until you finish the race
+ * -Versatility with the program by keeping track of each player's     
+ * with an integer
+ * 
+ * NOT ASSESSED AT ALL:
+ * -Ability to generally create and set up the Scanner class
+ * -The usage of methods
+ * 
+ * ONLY ASSESSED IN ADVANCED VERSION:
+ * -Ability to keep track of several players' current position (i.e. their number
+ * of steps taken)
+ * -Proficiency and flexibility with using Math.random() to perform various
+ * functions or enhancing the complexity of the possible values that Math.random()
+ * can re     [NOTE: This means randomly selecting events and making a roll
+ * of 7 let you roll the die again but with 1 more step travelled for EACH value]
+ */
 public class BasicDiceRace {
     public static void main(String[] args) {
         System.out.println("This program will create a functioning race." +
