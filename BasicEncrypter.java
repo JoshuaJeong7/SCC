@@ -1,3 +1,15 @@
+/**
+ * UNIT: Scanner and Strings (Intro to Java)
+ * 
+ * ASSESSMENT ON: 
+ * -Ability to use Scanner class
+ * -Ability to use the substring function with Strings
+ * 
+ * NOT ASSESSED AT ALL:
+ * -The encryption itself (i.e. the knowledge of ASCII and char values)
+ * -The usage of methods
+ * -If statements
+ */
 public class BasicEncrypter {
     public static void main(String[] args) {
         System.out.println("This program takes in a string and encrypts it," +
