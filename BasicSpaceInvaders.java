@@ -1,3 +1,42 @@
+/**
+ * UNIT: ArrayLists and Objects (Intermediate Java)
+ * 
+ * COMPLETED CLASSES:
+ * SpaceUnit.java
+ * Invader.java
+ * 
+ * ASSESSED CLASSES:
+ * Shooter.java
+ * BasicSpaceInvaders.java
+ * Any other classes freely created by the students
+ * 
+ * ASSESSMENT ON: 
+ * -The knowledge and understanding of the concept of inheritance
+ * -The ability to manipulate attributes and create methods within a class
+ * -The ability to use classes and inherited classes from client classes
+ *         that are outside of the target class's hierarchy
+ * -The knowledge, usage, and proficiency with using ArrayLists
+ * -The knowledge and proficiency with using ArrayList methods such as
+ *         isEmpty(), get(), remove(), and add()
+ * -The knowledge and ability to create overrided methods
+ * 
+ * NOT ASSESSED AT ALL:
+ * -The knowledge or usage of several library classes, such as javax.swing
+ * -The knowledge of how to use loops to create an ongoing game with an unlimited
+ *         amount of rounds
+ * 
+ * OPTIONAL TO ASSESS:
+ * -The game quality of the program that is created
+ * 
+ * ONLY ASSESSED IN ADVANCED VERSION:
+ *         NOTE: There is no "advanced" version, the way this program can be
+ *         advanced is if the students decide to add new content to their program.
+ * -The ability to put inheritance into practice by creating new subclasses
+ *         and extending them from superclasses
+ * -The ability to create new classes
+ * -The ability to create attributes, methods, and constructors from scratch
+ * -The proficiency with manipulating methods and attributes in and between classes
+ */
 import java.util.Scanner;
 import java.util.ArrayList;
 public class BasicSpaceInvaders {
