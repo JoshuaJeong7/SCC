@@ -1,0 +1,11 @@
+MAIN FILE (MUST RUN THIS FILE FOR PROGRAM TO EXECUTE):
+BasicSpaceInvaders.java
+
+REQUIRED FILES (MUST INCLUDE THESE FILES TO COMPILE):
+SpaceUnit.java
+Shooter.java
+Invader.java
+
+OPTIONAL FILES (Files here will enhance the code's experience, but are not required for the code to run):
+PoisonInvader.java
+Add your additional files here!
