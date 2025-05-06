@@ -68,17 +68,17 @@ public class IntroToReferences1 {
 	   * the variable in the main function are two completely separate
 	   * variables.
 	   * For simplicity, this can be represented by the following:
-	   * +——————————————+				 ___________	  
-	   * |	methodPass	|				/ house 3bC \    
-	   * +——————————————+				+———————————+    
-	   * |	a	(3bc)	|               |  a = 5  <------+
-	   * +——————————————+               +———————————+	 |
-	   * 												 |
-	   * +——————————————+				 ___________	 |
-	   * |  main        |			    / house f59 \	 |
-	   * +——————————————+				+———————————+	 |
-	   * |  x   (f59)   |				|  x = 5  -------+    
-	   * +——————————————+				+———————————+
+       * +——————————————+                 ___________      
+       * |   methodPass |                / house 3bC \    
+       * +——————————————+                +———————————+    
+       * |    a  (3bc)  |                |  a = 5   <------+
+       * +——————————————+                +———————————+     |
+       *                                                   |
+       * +——————————————+                 ___________      |
+       * |  main        |                / house f59 \     |
+       * +——————————————+                +———————————+     |
+       * |  x   (f59)   |                |  x = 5   -------+    
+       * +——————————————+                +———————————+
 	   * 
 	   * x and a live in completely different "houses". Therefore, they
 	   * are completely different variables themselves, so do not treat them
@@ -87,17 +87,17 @@ public class IntroToReferences1 {
 	   * from x regardless.
 	   * So in methodPass(), when a is incremented by 5, the diagram looks like this:
 	   * 
-	   * +——————————————+				 ___________	  
-	   * |	methodPass	|				/ house 3bC \    
-	   * +——————————————+				+———————————+    
-	   * |		a + 5	|               |  a = 10   | 
-	   * +——————————————+               +———————————+	 
-	   * 												 
-	   * +——————————————+				 ___________	 
-	   * |  main        |			    / house f59 \	 
-	   * +——————————————+				+———————————+	 
-	   * |     x        |				|  x = 5    |
-	   * +——————————————+				+———————————+
+       * +——————————————+                 ___________      
+       * |  methodPass  |                / house 3bC \    
+       * +——————————————+                +———————————+    
+       * |     a + 5    |                |  a = 10   | 
+       * +——————————————+                +———————————+     
+       *                                                  
+       * +——————————————+                 ___________     
+       * |  main        |                / house f59 \     
+       * +——————————————+                +———————————+     
+       * |     x        |                |  x = 5    |
+       * +——————————————+                +———————————+
 	   * 
 	   * Notice that a has been incremented, but not x. This is because a
 	   * is treated as a completely unrelated to x, so when one variable is
