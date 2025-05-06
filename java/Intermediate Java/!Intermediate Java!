@@ -1,5 +1,7 @@
 The following coding projects for Intermediate Java are:
 BasicWordle.java (Deals with 1D Arrays, loops, and if-statements)
+
+The following coding project FAMILIES (Multiple classes at once) are:
 The Classroom.java family (Deals with proficiency with classes and their methods + field variables)
 The PokemonBattle.java family (Deals with proficiency with inheritance, classes, and their methods)
 The BasicSpaceInvaders.java family (Deals with ArrayLists and general proficiency with classes and inheritance)
