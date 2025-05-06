@@ -1,0 +1,12 @@
+MAIN FILE (MUST RUN THIS FILE TO EXECUTE THE WHOLE PROGRAM):
+PokemonBattle.java
+
+REQUIRED FILES (MUST INCLUDE THESE FILES TO COMPILE):
+Pokemon.java
+Bulbasaur.java
+Charmander.java
+Squirtle.java
+
+
+OPTIONAL FILES (Adding these files will enhance the code but omitting them will not break the code):
+Add your extra files here!
