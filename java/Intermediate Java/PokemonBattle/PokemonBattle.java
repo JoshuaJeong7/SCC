@@ -164,5 +164,8 @@ public class PokemonBattle {
             //Enter a new line for cleaner formatting
             System.out.println();
         }
+
+        System.out.println("If you made it this far, try adding more moves to all the pokemon!");
+        System.out.println("Try out other things too, like adding complete new pokemon, new items/pokeballs, a storyline, a boss fight, team pokemons, etc. There's no limit to creativity!");
     }
 }
