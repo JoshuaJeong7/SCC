@@ -80,6 +80,7 @@ public class PokemonBattle {
         //Have the second player pick their pokemon of choice
         
         System.out.println("PLAYER 2: Choose your pokemon between Bulbasaur, Charmander, and Squirtle.");
+        System.out.println("FINISH THIS FUNCTION IN THE CODE");
         /**+----------------------------------------------------------------+ **/
         /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
         /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
