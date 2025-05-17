@@ -78,20 +78,17 @@ public class PokemonBattle {
             pokemon1 = new Charmander();
         
         //Have the second player pick their pokemon of choice
-        /** FROM THIS COMMENT TO THE END COMMENT, THE STUDENTS HAVE TO CODE THEMSELVES **/
+        
         System.out.println("PLAYER 2: Choose your pokemon between Bulbasaur, Charmander, and Squirtle.");
-        String player2Choice = in.next();
-        
-        Pokemon pokemon2;
-        if (player2Choice.equalsIgnoreCase("Squirtle"))
-            pokemon2 = new Squirtle();
-        else if (player2Choice.equalsIgnoreCase("Bulbasaur"))
-            pokemon2 = new Bulbasaur();
-        else
-            pokemon2 = new Charmander();
-            
-        /** THIS IS THE END COMMENT */
-        
+        /**+----------------------------------------------------------------+ **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /**+----------------------------------------------------------------+ **/
+       
         boolean gameIsRunning = true;
         while (gameIsRunning) {
             
@@ -131,7 +128,7 @@ public class PokemonBattle {
             
             if (gameIsRunning) {
                 //Choose whether to fight or heal 10 HP for the current pokemon
-                /** FROM THIS COMMENT TO THE END COMMENT, THE STUDENTS HAVE TO CODE THEMSELVES **/
+                
                 int decision2 = 0;
                 while (decision2 < 1 || decision2 > 2) {
                     System.out.println("PLAYER 2: What would you like to do? (enter number)");
@@ -144,7 +141,7 @@ public class PokemonBattle {
                     pokemon2.fight(pokemon1);
                 else if (decision2 == 2)
                     pokemon2.heal(10);
-                /** THIS IS THE END COMMENT */
+                
             }
             //Update the turn of this current pokemon (code is provided for you)
             pokemon2.updateTurn(pokemon1);
