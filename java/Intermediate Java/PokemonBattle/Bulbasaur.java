@@ -20,20 +20,13 @@ public class Bulbasaur extends Pokemon {
     }
     
     public void fight(Pokemon other) {
-        //NOTE: The red comments are ALL that the students will see upon first
-        //        receiving the program.
-        
-        //Scanner moveInput = new Scanner(System.in);
-        
-        //System.out.println("Which move will you attack with, Squirtle? (enter number)");
-        //System.out.println("1) [move name]");
-        
+
         Scanner moveInput = new Scanner(System.in);
         
         System.out.println("Which move will you attack with, Bulbasaur? (enter number)");
         System.out.println("1) Tackle");
         System.out.println("2) Life Drain");
-        
+        System.out.println("Add more moves in the code!");
         
         int chosenMove = moveInput.nextInt();
         
