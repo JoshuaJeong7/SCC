@@ -44,10 +44,9 @@ public class SpaceUnit {
     }
     
     public void upgradeDamage(int level) {
-        damage += level;
+        //Make this function do whatever you want depending on the unit!
     }
     public void upgradeHealth(int level) {
-        maxHealth += level;
-        healthLeft = maxHealth; //Fully heals the unit and increases their max health
+        //Make this function do whatever you want depending on the unit!
     }
 }
