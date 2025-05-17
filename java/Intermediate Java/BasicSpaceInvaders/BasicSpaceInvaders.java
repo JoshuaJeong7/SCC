@@ -96,19 +96,17 @@ public class BasicSpaceInvaders {
             /// and two more invaders are spawned than the starting amount from last round,
             /// each invader with slightly higher stats.
             
-            //NOTE: Inside this if statement (for when the round ends) is
-            //completely empty, and the students must be able to code all
-            //the required components inside this if statement.
-            //The if-statement itself is already provided.
             System.out.println("ROUND CLEARED! Shooter is upgraded! Full heal!");
             
             rounds++;
             shooter.upgradeHealth(20);
             shooter.upgradeDamage(rounds);
+                //System.out.println("Every round, two stronger invaders are added.");
                 for (int i = 0; i < rounds * 2; i++) {
                     invadersLeft.add(new Invader(5, 90 + (rounds * 10)));
                     
                 }
+                //System.out.println("Starting from round 10, one poison invader is added per round.");
                 for (int i = 10; i < rounds; i++)
                     invadersLeft.add(new PoisonInvader(4, rounds * 10));
             }
@@ -149,5 +147,7 @@ public class BasicSpaceInvaders {
                 gameIsRunning = false;
         }
         System.out.println("FINAL ROUND REACHED: Round " + rounds);
+        System.out.println("If you made it this far, try adding a boss fight every 15 or 20 rounds!");
+        System.out.println("Try out other things too, like adding another ability to the shooter, adding more invaders, making shootable items to use, etc. There's no limit to creativity!");
     }
 }
