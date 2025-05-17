@@ -97,5 +97,11 @@ public class Shooter extends SpaceUnit {
         super.upgradeDamage(level);
         minDamage += level;
     }
+
+    public void upgradeHealth(int level) {
+        super.upgradeHealth(level);
+        maxHealth += level;
+        healthLeft = maxHealth; //Fully heals the unit and increases their max health
+    }
 }
     
