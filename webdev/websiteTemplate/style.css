@@ -1,0 +1,19 @@
+#title{
+    text-align: center;
+    color: rgb(65, 35, 35);
+    font-family:fantasy;
+}
+/* CSS Comment */
+#customButton{
+    text-align: center;
+    color: rgb(36, 98, 139);
+    font-family:fantasy;
+    border-radius: 10px;
+    border-width: 15px;
+    padding: 80px;
+    margin: 5px;
+}
+
+#buttonDiv{
+    text-align: center;
+}
