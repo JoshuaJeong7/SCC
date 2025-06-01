@@ -21,7 +21,7 @@ import java.util.Scanner;
  * of steps taken)
  * -Proficiency and flexibility with using Math.random() to perform various
  * functions or enhancing the complexity of the possible values that Math.random()
- * can re     [NOTE: This means randomly selecting events and making a roll
+ * can return [NOTE: This means randomly selecting events and making a roll
  * of 7 let you roll the die again but with 1 more step travelled for EACH value]
  */
 public class BasicDiceRace {
@@ -45,18 +45,18 @@ public class BasicDiceRace {
          * Here are some helpful tips to follow:
          * 
          * -YOU MUST START BY WRITING THE LOOP ITSELF!!!!
-         *         The code that has already been typed represents ONE     ,
-         *         not a LOOP of     s.
+         *         The code that has already been typed represents ONE turn,
+         *         not a LOOP of turns.
          * 
          * -Don't forget to print an end message for after the game ends!
-         *         Optionally, print how many     s it took to win the race.
+         *         Optionally, print how many turns it took to win the race.
          */
          
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the number of steps required to finish the race:");
         
         int raceLength = input.nextInt() - 1; 
-        input.nextLine(); //THE STUDENTS code this line in
+        input.nextLine();
         ///NOTE TO STUDENTS: PAY ATTENTION TO THIS INT VARIABLE!! IT STORES THE MAXIMUM STEPS TO WIN THE RACE!!
     
         ///NOTE TO STUDENTS: 1 is subtracted from the race length because
@@ -81,7 +81,7 @@ public class BasicDiceRace {
                 
                 System.out.println(" \n \n ");
                 /**
-                 * CRITERIA OF WHAT TO DO IN ONE     :
+                 * CRITERIA OF WHAT TO DO IN ONE TURN:
                  * 1) Prompt the user to roll the die
                  * 2) Roll the die itself and store it in an int value
                  * 3) Determine if the user needs to roll again
@@ -106,18 +106,18 @@ public class BasicDiceRace {
                 System.out.println("+-------+");
         
                 /// 3) Determine if the user needs to roll again
-                while (dieRoll == 7) {
-                    System.out.println("Rolled a 7! Roll your dice again. (Press enter to continue)");
-                    input.nextLine();
-                    dieRoll = (int)(Math.random() * 7) + 1;
-                    System.out.println("RESULT OF DICE:");
-                    System.out.println("+-------+");
-                    System.out.println("|       |");
-                    System.out.println("|   " + dieRoll + "   |");
-                    System.out.println("|       |");
-                    System.out.println("+-------+");
-                }
-                
+                //Tip 1: You can combine steps 3) and 2)
+                //Tip 2: You need to still ask for the user input when rolling again
+                /**+----------------------------------------------------------------+ **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /**+----------------------------------------------------------------+ **/
+
+            
                 ///4) Determine which step the player is on, and end the game
                 ///     if they are at or past the finish line, or make them travel
                 ///     backwards by 4 steps if they land on a backwards tile
@@ -127,29 +127,45 @@ public class BasicDiceRace {
                     ///If the player reaches or passes the finish line
                     //FINISH MISSING CODE (ONE line needed to END the game)
                     
+                    /**+----------------------------------------------------------------+ **/
+                    /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                    /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                    /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                    /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                    /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                    /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                    /**+----------------------------------------------------------------+ **/
                 }
                 else if (yourSteps == backwardsStep1) {
+                    //If the player lands on a backwards tile, send them 4 tiles backwards
                     yourSteps -= 4;
                     System.out.println("Landed on a backwards tile! Moving backwards");
                 }
+            
                 //REPEAT THE STEPS FOR ALL FIVE BACKWARDS STEPS
                 
-                //(The students may type everything below)
-                else if (yourSteps == backwardsStep2 || yourSteps == backwardsStep3
-                        || yourSteps == backwardsStep4 || yourSteps == backwardsStep5) {
-                            
-                    yourSteps -= 4;
-                    System.out.println("Landed on a backwards tile! Moving backwards");
-                        
-                }
+                /**+----------------------------------------------------------------+ **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /**+----------------------------------------------------------------+ **/
                     
-                
+                System.out.println("Press enter to continue");
+                input.nextLine();
+            
                 /// 5) Print the results of the player's turn and update the amount of turns
-                // TYPE YOUR CODE HERE
-                //(The students may type everything below)
-                numTurns ++;
-                System.out.println("     " + numTurns );
-                System.out.println("Player's position: " + yourSteps);
+            
+                /**+----------------------------------------------------------------+ **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /**+----------------------------------------------------------------+ **/
                 
             
             
