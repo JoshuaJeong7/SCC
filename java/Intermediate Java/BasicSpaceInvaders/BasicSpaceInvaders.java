@@ -95,6 +95,8 @@ public class BasicSpaceInvaders {
             ///health are levelled up, the shooter's HP is restored to full,
             /// and two more invaders are spawned than the starting amount from last round,
             /// each invader with slightly higher stats.
+                
+            /// ADDITIONALLY: Starting from a certain interval of rounds, new, stronger invaders will be introduced!
             
             System.out.println("ROUND CLEARED! Shooter is upgraded! Full heal!");
             
