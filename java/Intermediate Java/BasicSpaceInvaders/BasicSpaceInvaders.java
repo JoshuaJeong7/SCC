@@ -86,10 +86,13 @@ public class BasicSpaceInvaders {
         Scanner in = new Scanner(System.in);
         
         int rounds = 1; //The students may add this line of code
-        
-        //NOTE: This game structure is already provided for the students.
+
+        //Try keeping track of what round this is!
         while (gameIsRunning) {
             if (invadersLeft.isEmpty() ) {
+                
+            System.out.println("ROUND CLEARED! Shooter is upgraded! Full heal!");
+
             ///When there are no invaders left, this simulates the start of
             ///a new round. The rounds counter goes up, the shooter's damage and
             ///health are levelled up, the shooter's HP is restored to full,
@@ -97,20 +100,16 @@ public class BasicSpaceInvaders {
             /// each invader with slightly higher stats.
                 
             /// ADDITIONALLY: Starting from a certain interval of rounds, new, stronger invaders will be introduced!
+            System.out.println("FINISH THIS FUNCTION IN THE CODE");
             
-            System.out.println("ROUND CLEARED! Shooter is upgraded! Full heal!");
-            
-            rounds++;
-            shooter.upgradeHealth(20);
-            shooter.upgradeDamage(rounds);
-                //System.out.println("Every round, two stronger invaders are added.");
-                for (int i = 0; i < rounds * 2; i++) {
-                    invadersLeft.add(new Invader(5, 90 + (rounds * 10)));
-                    
-                }
-                //System.out.println("Starting from round 10, one poison invader is added per round.");
-                for (int i = 10; i < rounds; i++)
-                    invadersLeft.add(new PoisonInvader(4, rounds * 10));
+            /**+----------------------------------------------------------------+ **/
+            /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+            /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+            /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+            /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+            /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+            /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+            /**+----------------------------------------------------------------+ **/
             }
             
             ///Everything else inside this game loop is already completed
