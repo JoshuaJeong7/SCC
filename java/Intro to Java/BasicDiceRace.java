@@ -94,9 +94,7 @@ public class BasicDiceRace {
                 
                 /// 1) Prompt the user to roll the die
                 // TYPE YOUR CODE HERE (The students must type everything below)
-                System.out.println("Roll your die to determine the number of steps" +
-                    " to travel. (Press enter to continue)");
-                input.nextLine();
+                
                 
                 /// 2) Roll the die itself and store it in an int value
                 int dieRoll = (int)(Math.random() * 7) + 1;
@@ -108,10 +106,6 @@ public class BasicDiceRace {
                 System.out.println("+-------+");
         
                 /// 3) Determine if the user needs to roll again
-                //TYPE YOUR CODE HERE    Note 1: You can combine steps 3) and 2)
-                //Note 2: You need to still ask for the user input when rolling again
-                
-                //(The students may type everything below)
                 while (dieRoll == 7) {
                     System.out.println("Rolled a 7! Roll your dice again. (Press enter to continue)");
                     input.nextLine();
@@ -129,10 +123,11 @@ public class BasicDiceRace {
                 ///     backwards by 4 steps if they land on a backwards tile
                 yourSteps += dieRoll;
                 
-                if (yourSteps >= raceLength) ///If the player reaches or passes the finish line
+                if (yourSteps >= raceLength) {
+                    ///If the player reaches or passes the finish line
                     //FINISH MISSING CODE (ONE line needed to END the game)
-                    gameIsRunning = false; //THE STUDENTS code this line in
-                
+                    
+                }
                 else if (yourSteps == backwardsStep1) {
                     yourSteps -= 4;
                     System.out.println("Landed on a backwards tile! Moving backwards");
@@ -149,7 +144,7 @@ public class BasicDiceRace {
                 }
                     
                 
-                /// 5) Print the results of the player's     
+                /// 5) Print the results of the player's turn and update the amount of turns
                 // TYPE YOUR CODE HERE
                 //(The students may type everything below)
                 numTurns ++;
