@@ -16,15 +16,14 @@ def reset_map(grid):
     for i in range(0, GRID_SIZE):
         grid.append(default_rows.copy())
 
+"""
+This is one of the methods you have to complete.
+Given the parameter num_mine, which defines the number of mines that are to be placed on the board,
+place all of these mines in a random position on the 2D list "grid".
+Make sure you prevent one mine from being placed at a location where a mine already exists!
+"""
 def set_mine(grid, num_mine):
-    row = random.randint(0, GRID_SIZE - 1)
-    col = random.randint(0, GRID_SIZE - 1)
-    while num_mine > 0:
-        while (grid[row][col] == -1):
-            row = random.randint(0, GRID_SIZE - 1)
-            col = random.randint(0, GRID_SIZE - 1)
-        grid[row][col] = -1
-        num_mine -= 1
+    #Method code here!
 
 def find_nums(grid):
     # r = 0
@@ -73,14 +72,17 @@ def reveal_location(answer_map, tested_map, y, x):
             found_all_locs = found_all_locs and reveal_location(answer_map, tested_map, r, c)
     return found_all_locs
 
-
+"""
+This is another method you will have to complete.
+Given the row and column coordinates (y and x), determine if the current coordinate given
+(grid[y][x]) is currently unexplored. 
+If it is unexplored (-2), then flag the location (-3).
+If the location is already flagged (-3), then unflag it and show the unexplored location (-2).
+Otherwise, if the location is any sort of value that indicates it has been explored, 
+print an error stating that you cannot flag already explored tiles.
+"""
 def flag_loc(grid, y, x):
-    if grid[y][x] == -2:
-        grid[y][x] = -3
-    elif grid[y][x] == -3:
-        grid[y][x] = -2
-    else:
-        input("Cannot flag an already explored tile. [Press enter to acknowledge]")
+    #Add code here
 
 def print_horiz_bar():
     message = "\t# "
