@@ -48,29 +48,27 @@ def find_nums(grid):
                 grid[r][c] = count
 
 
+"""
+This is probably the hardest method that you will need to code.
+You are given a set that contains all the discovered locations.
+This function returns either True or False depending on if the user has lost.
+If the user has stepped on a mine
+(i.e. the given coordinates is the location of a mine in the answer_map),
+then the function returns False (lose handling will happen automatically).
+If the user has revealed a number on the current location, then modify the
+tested_map to show the same number on the answer_key.
+
+However, if the user reveals a spot where there is zero adjacent mines
+(i.e. the current coordinates have a value of 0 on the answer key),
+then initially update that location on the tested_map with the value of 0, and afterwords
+USE RECURSIVE BACKTRACKING to call this function again, but with all locations
+adjacent to that current location.
+
+The base case is if the user goes out of bounds OR discovers a non-empty location.
+"""
 discovered_locs = set()
 def reveal_location(answer_map, tested_map, y, x):
-    if x < 0 or y < 0 or x >= GRID_SIZE or y >= GRID_SIZE:
-        return True
-    if tested_map[y][x] == -3:
-        input("You cannot reveal a flagged location. [Press enter to acknowledge]")
-        return True
-
-    discovered_locs.add((y, x))
-    tested_map[y][x] = answer_map[y][x]
-    
-    if answer_map[y][x] == -1:
-        return False
-    
-    if answer_map[y][x] != 0:
-        return True
-    
-    all_adj = ((y - 1, x - 1), (y - 1, x), (y - 1, x + 1), (y, x - 1), (y, x + 1), (y + 1, x - 1), (y + 1, x), (y + 1, x + 1))
-    found_all_locs = True
-    for (r, c) in all_adj:
-        if (r, c) not in discovered_locs:
-            found_all_locs = found_all_locs and reveal_location(answer_map, tested_map, r, c)
-    return found_all_locs
+    #Code your method here
 
 """
 This is another method you will have to complete.
