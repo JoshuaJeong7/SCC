@@ -508,4 +508,7 @@ public class ReferenceListIntro3 {
 	 public void printList(myLinkedList testList) {
 		 //Type your code here
 	 }
+
+	//Note: Solutions for all three methods are shown in the slides!
+	
 }
