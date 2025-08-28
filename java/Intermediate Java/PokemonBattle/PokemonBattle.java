@@ -160,7 +160,11 @@ public class PokemonBattle {
                 System.out.println("Player 2 wins with " + pokemon2.name + "!");
                 gameIsRunning = false;
             }
-            
+            else {
+                System.out.println("Player 2's " + pokemon2.name + " has fainted!");
+                System.out.println("Player 1 wins with " + pokemon1.name + "!");
+                gameIsRunning = false;
+            }
             //Enter a new line for cleaner formatting
             System.out.println();
         }
