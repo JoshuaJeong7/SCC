@@ -1,5 +1,4 @@
 public class ReferenceListIntro3 {
-	///						NOTE: This file is incomplete at the moment.
 	public static void main(String[] args) { //This line is used to avoid issues
 										//with calling non-static methods
 										//from a static method.
@@ -7,6 +6,8 @@ public class ReferenceListIntro3 {
 		
 		System.out.println("\n\n—————————————————————————\nVIRAL MEME!!!\n—————————————————————————\n\n");
 		r.viralMeme();
+		System.out.println("\n\n—————————————————————————\nCONGA LINE!!!\n—————————————————————————\n\n");
+		r.congaLine();
 		System.out.println("\n\n");
 	}
 	/*
@@ -223,7 +224,9 @@ public class ReferenceListIntro3 {
 	 * 
 	 * This is actually a very powerful tool about references! Whenever you
 	 * say the keyword 'new', the program creates an entirely new house.
-	 * For example, here is our house for AThing:
+	 * For example, here is our house for AThing if we write the following code:
+	 * 
+	 * AThing thing3bb = new AThing();
 	 * 
 	 *  		      _______________            
      *               / house 3bb     \
@@ -239,7 +242,11 @@ public class ReferenceListIntro3 {
      * 
      * 
      * 
-     *     next = new AThing(20);
+     *     thing3bb.nextThing(20);
+     * 
+     * This is the equivalent to:
+     * 
+     *     thing3bb.next = new AThing(20);
      * 
      * 
      * 
@@ -291,8 +298,8 @@ public class ReferenceListIntro3 {
      * 
      * This is pretty exciting! We just found a way to link one house to
      * a completely different house! In other words, JUST by having the
-     * memory address for 182798, we have access to a completely new memory
-     * address thanks to our "next" field variable.
+     * memory address for 182798, we have access to a completely new object
+     * thanks to our "next" field variable.
      * 
      * In simple terms, this means that just by having access to house 3bb,
      * we already have access to house sdn!
@@ -366,6 +373,12 @@ public class ReferenceListIntro3 {
      * 
      * 
      * 
+     * 
+     * This process, where an object links to another object of the same class
+     * repeatedly, creates a structure called a LINKED LIST.
+     * 
+     * 
+     * 
      * You may be asking:
      * 
      * 
@@ -397,10 +410,102 @@ public class ReferenceListIntro3 {
      * variable points directly to the next object!)
      * 
      * 
-     * 
-     * 
-     * 
-     * 
 	 */
 	
+	
+	/* To prove the conga line works, here's a line of code that does everything
+	 * described above with the linked list / conga line!
+	 */
+	public void congaLine() {
+		AThing thing3bb = new AThing();
+		
+		thing3bb.next = new AThing(20); //house sdn
+		thing3bb.next.next = new AThing(-3); //house v3g
+		thing3bb.next.next.next = new AThing(100); //house b93
+		thing3bb.next.next.next.next = new AThing(9399); //house gv9
+		thing3bb.next.next.next.next.next = new AThing(-20); //house 39t
+		
+		// Just to make things fun, we will preview the code for how to "travel" through
+		// a linked list!
+		// Don't worry about not understanding, we will explain later in the slides!
+		
+		AThing currentThing = thing3bb;
+		while (currentThing != null) {
+			System.out.println("CONGA LINE!!!");
+			System.out.println(currentThing.myNum);
+			
+			currentThing = currentThing.next;
+		}
+	}
+	
+   /**
+	 * 
+	 * 
+	 * Wanna get some practice with linked lists? Try creating a linked list
+	 * of your own!
+	 * 
+	 * 
+	 * Below is the sample class given to set up a linked list:
+	 * 
+	 */
+	 
+	class myLinkedList {
+		public int num;
+		public myLinkedList next;
+		
+		public myLinkedList() {
+			this(0);
+		}
+		public myLinkedList(int myNum) {
+			num = myNum;
+			next = null;
+		}
+		//To change num later, just use [object name].num = ###;
+		
+		//To change next later, just use [object name].next = new myLinkedList(###);
+	} 
+	
+	/*
+	 * We know that it is bad coding practice to make field variables public,
+	 * but for the sake of simplicity of this exercise we will do just that.
+	 * 
+	 * 
+	 * Your tasks for what to do with this linked list are below!
+	 */
+	 
+	 
+	 /**
+	  *  TASK 1:
+	  *  Create a linked list with the following linked elements:
+	  * 
+	  *  1 -> 4 -> 2 -> 3
+	  */
+	  
+	 public void createList() {
+		 //Type your code here
+	 }
+	 
+	 /**
+	  *  TASK 2:
+	  *  Modify an EXISTING linked list so that the 3rd element is always -1.
+	  * (You may assume that the list will ALWAYS be at least 3 elements long.)
+	  *
+	  *  Example
+	  *  Original: 1 -> 4 -> 2 -> 3
+	  *  New: 1 -> 4 - > -1 -> 3
+	  */
+	 
+	 public void modifyList(myLinkedList testList) {
+		 //Type your code here
+	 }
+	 
+	 /**
+	  *  TASK 3 (EXTRA CHALLENGE):
+	  *  Traverse through an existing linked list to print all values stored
+	  *  in that list, in order.
+	  */
+	 
+	 public void printList(myLinkedList testList) {
+		 //Type your code here
+	 }
 }
