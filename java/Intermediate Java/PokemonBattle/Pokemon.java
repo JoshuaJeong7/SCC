@@ -57,7 +57,8 @@ public class Pokemon {
         
         defense = startDefense;
     }
-    
+
+    //This method will get overwritten by subclasses anyway.
     public void fight(Pokemon other) {
         other.getHit((int)(15 * power));
     }
