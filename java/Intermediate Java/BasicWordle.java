@@ -23,9 +23,9 @@ import java.util.Scanner;
  
 public class BasicWordle {
     public static void main(String[] args) {
-        
-        System.out.println("This program simulates a basic version of \"Wordle\". \n" +
-        " In Wordle, you have 6 guesses to guess a 5-letter word. \n After every guess," +
+
+       /*
+        v " In Wordle, you have 6 guesses to guess a 5-letter word. \n After every guess," +
         " each of the 5 guessed LETTERS will be individually highlighted different colors. \n" +
         " If a letter is yellow, then that letter exists within the correct word. \n" +
         " If a letter is dark gray, then that letter does not exist within the correct word. \n" +
@@ -33,8 +33,9 @@ public class BasicWordle {
         " the letter is also in the exact same position as the letter in the correct word. \n" +
         " The game is won if every letter is green, so you correctly guessed the word. \n" +
         " If after 6 guesses you do not guess the correct word, the game is lost with " +
-        " the correct word displayed. \b Here are some differences between this program" +
-        " and the original Wordle to follow when coding this program: \n" +
+        " the correct word displayed."
+       */
+        System.out.println("This program simulates a basic version of \"Wordle\". \n" +
         " 1) There is a bar of 5 dots (\"•••••\") which represents the GREEN letters. \n" +
         " 2) Next to these dots are listed all YELLOW letters (\"•••••  edf\"). \n" +
         " 3) Unlike the original Wordle, you are allowed to type letter combinations" +
@@ -77,46 +78,19 @@ public class BasicWordle {
         //From here on out, the students see nothing, they must code the entire
         //game by themselves
         printAllGuesses(guesses, word);
-        
-        for (int i = 0; i < guesses.length; i++) {
-            System.out.println("Guess " + (i + 1) + "/" + guesses.length);
-            do {
-                System.out.println("Enter a 5 letter word for your guess:");
-                guesses[i] = in.nextLine();
-            } while (guesses[i].length() != 5);
-            
-            printAllGuesses(guesses, word);
-            System.out.println();
-            
-            if (guesses[i].equals(word)) {
-                System.out.println("You guessed the correct word!!!");
-                break;
-            }
-        }
+     
+       // Code the whole loop structure for guessing a word!
+
+       // Hint: the printAllGuesses method handles all the color logic FOR you.
+       // The only work you have to do is if the guessed word equals the real word!
         
         System.out.println("GAME OVER - The letter was " + word);
     }
     
     /**
-     * 
+     * NOTE: This method is complete.
      */
     public static void printAllGuesses(String[] guesses, String correctWord) {
-
-        //NOTE: When the students receive the code, this is all they see
-        //inside the method:
-        //for (int i = 0; i < guesses.length; i++) {
-        //    //Print all green letters
-        //    for (int a = 0; a < 5; a++) {
-        //        System.out.print("•");
-        //    }
-        //
-        //    System.out.print("  ");
-        //
-        //    //Print all yellow letters
-        //    for (int a = 0; a < 5; a++) {
-        //
-        //    }
-        //}
         for (int i = 0; i < guesses.length; i++) {
             
             //Print all green letters
