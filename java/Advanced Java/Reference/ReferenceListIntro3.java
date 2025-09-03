@@ -11,7 +11,9 @@ public class ReferenceListIntro3 {
 		System.out.println("\n\n");
 	}
 	/*
-
+	 * We learned from last lecture that objects can be represented as memory addresses
+	 * that refer one-to-one to that object. This can be represented with the visual below:
+  	 *
      * +——————————————————————————————————+      
      * |classSwap                         |              ___________            
      * +——————————————————————————————————+             / house bfg \
