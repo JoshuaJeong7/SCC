@@ -1,7 +1,7 @@
 /**
  * PART OF THE PokemonBattle.java PROGRAM
  * 
- * -FULLY COMPLETED CLASS
+ * -BASIC TEMPLATE FOR THIS CLASS
  */
 public class Pokemon {
     /**
