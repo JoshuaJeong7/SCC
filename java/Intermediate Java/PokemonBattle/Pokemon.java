@@ -5,10 +5,10 @@
  */
 public class Pokemon {
     /**
-     * NOTE TO STUDENTS: This class is fully completed, but use it as a
+     * NOTE TO STUDENTS: This class is technically completed, but use it as a
      * reference for how you should code your other classes in this program!
-     * This class also provides every tool you should know if you choose
-     * to extend from this class.
+     * You are also more than encouraged to add new field variables and methods
+     * to this class.
      */
     
     public int turns; //This variable is never used in this default class,
