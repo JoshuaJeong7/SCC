@@ -1,12 +1,10 @@
 import java.util.Scanner;
 /**
  * UNIT: Inheritance
- * 
- * COMPLETED     :
- * Pokemon.java
- * 
+ *
  * ASSESSED     :
  * PokemonBattle.java
+ * Pokemon.java
  * Squirtle.java
  * Bulbasaur.java
  * Charmander.java
@@ -77,8 +75,6 @@ public class PokemonBattle {
         else
             pokemon1 = new Charmander();
         
-        //Have the second player pick their pokemon of choice
-        
         System.out.println("PLAYER 2: Choose your pokemon between Bulbasaur, Charmander, and Squirtle.");
         System.out.println("FINISH THIS FUNCTION IN THE CODE");
         /**+----------------------------------------------------------------+ **/
@@ -96,8 +92,6 @@ public class PokemonBattle {
             System.out.println("\n \n Turn " + pokemon1.turns);
             
             ///PLAYER 1's TURN
-            //The entire structure of player 1's turn is provided for you.
-            //You must code the structure for player 2's turn.
             System.out.println("Current pokemon: " + pokemon1.name);
             
             int decision1 = 0;
