@@ -1,4 +1,7 @@
-There are three projects in Intro to Java:
+Here are the following projects in Intro to Java, in order of difficulty:
+BasicRPS.java (Coding with if-statements, input, and possibly random)
+IntermediateRPS.java (Coding with LOOPS, if-statements, input, and possibly random)
+
 BasicEncrypter.java (Evaluates on loops and characters)
 OddCharacterOut.java (Mostly evaluates on if statements; deals with strings and characters too)
 BasicDiceRace.java (Mostly evaluates on while loops and general programming proficiency)
