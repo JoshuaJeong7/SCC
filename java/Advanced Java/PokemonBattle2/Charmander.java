@@ -70,18 +70,13 @@ public class Charmander extends FirePokemon {
     }
     
     public void ember(Pokemon other) {
-        //Deals low initial damage to the other Pokemon, but has a chance
-        //to inflict burn on them, dealing constant damage for a random
-        //duration of time between 1-5 turns. 
-        System.out.println(name + " used Ember!");
-        other.getHit((int)(4 * power));
+        //This is just to show that we are using the generic implementation
+        //of ember() from the FirePokemon class.
+        //Feel free to completely replace this method with your own code
+        //for implementation!
         
-        //Randomly generated integer between 0 and 5
-        emberDuration = (int)(Math.random() * 5); 
-        
-        System.out.println(name + " inflicted burn on " + other.name +
-                            " for " + emberDuration + " turns!");
-                    
+       super.ember(other);
+       emberDuration = super.burnDuration;
     }
 
     public void updateTurn(Pokemon other) {
