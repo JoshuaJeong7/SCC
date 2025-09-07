@@ -1,29 +1,27 @@
 import java.util.Scanner;
 import java.util.HashMap;
-private class AssignedMethods {
-	//Because this class is now private, that means that we can no longer
-	//create objects/variables of this class.
-	//The only thing we can do now is call static methods from this class,
-	//i.e. AssignedMethods.addPokemon();
+public class AssignedMethods {
 	
 	
+	/**
+	 * This is the only method completed for you. The rest you must code on
+	 * your own.
+	 * 
+	 */
 	public String addPokemon(HashMap<String, Pokemon> playerPokemon) {
 		Scanner opt = new Scanner(System.in);
 		int count = 0;
 		
 		String selectedPokemon = ""; //Represents the name, or the "key",
 			// of the current selected pokemon in the map.
-			
-			//YOU WILL HAVE TO RETURN THIS VALUE
 		
 		while (count < 6) {
 			System.out.println("Enter the next pokemon you would like to add.");
-			System.out.println("(NOTE: If you are ONLY able to pick Squirtle, then your code is unfinished!)");
 			
 			String newPokemon = opt.nextLine();
+			selectedPokemon = newPokemon;
+			playerPokemon.put(newPokemon, returnCopyOf(newPokemon));
 		}
-		
-		//Finish your code here
 		
 		
 		return selectedPokemon;
@@ -38,7 +36,28 @@ private class AssignedMethods {
 		
 	}
 	
-	public void itemOptions(HashMap<String, int> playerItems) {
+	public void itemOptions(HashMap<String, Integer> playerItems) {
 		
+	}
+	
+	public Pokemon returnCopyOf(String pokemon) throws ClassNotFoundException {
+		Pokemon returnedPokemon;
+		switch (pokemon) {
+			case "Bulbasaur":
+				returnedPokemon = new Bulbasaur();
+			break;
+			
+			case "Squirtle":
+				returnedPokemon = new Squirtle();
+			break;
+			
+			case "Charmander":
+				returnedPokemon = new Charmander();
+			break;
+			
+			default:
+				throw new ClassNotFoundException("ERROR: No Valid Pokemon Entered!");
+		}
+		return returnedPokemon;
 	}
 }
