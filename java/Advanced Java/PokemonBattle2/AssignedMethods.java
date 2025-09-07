@@ -8,7 +8,7 @@ public class AssignedMethods {
 	 * your own.
 	 * 
 	 */
-	public Pokemon addPokemon(HashMap<String, Pokemon> playerPokemon) {
+	public static Pokemon addPokemon(HashMap<String, Pokemon> playerPokemon) {
 		Scanner opt = new Scanner(System.in);
 		int count = 0;
 		
@@ -19,7 +19,13 @@ public class AssignedMethods {
 			System.out.println("Enter the next pokemon you would like to add. (" + (count + 1) + " / 6)");
 			
 			String newPokemon = opt.nextLine();
-			selectedPokemon = returnCopyOf(newPokemon);
+			try {
+				selectedPokemon = returnCopyOf(newPokemon);
+			}
+			catch (ClassNotFoundException e) {
+				System.err.println("Invalid pokemon; Does not exist in this program");
+				continue;
+			}
 			playerPokemon.put(newPokemon, selectedPokemon);
 			count++;
 		}
@@ -34,11 +40,11 @@ public class AssignedMethods {
 			else {
 				System.out.println("Invalid pokemon name");
 			}
-		} while (selectedPokemon == null):
+		} while (selectedPokemon == null);
 		return selectedPokemon;
 	}
 	
-	public void switchOptions(HashMap<String, Pokemon> playerPokemon) {
+	public static void switchOptions(HashMap<String, Pokemon> playerPokemon) {
 		Scanner opt = new Scanner(System.in);
 		boolean hasSwitched = false;
 		System.out.println("Which pokemon would you like to switch to?");
@@ -47,11 +53,11 @@ public class AssignedMethods {
 		
 	}
 	
-	public void itemOptions(HashMap<String, Integer> playerItems) {
+	public static void itemsOptions(HashMap<String, Integer> playerItems) {
 		
 	}
 	
-	public Pokemon returnCopyOf(String pokemon) throws ClassNotFoundException {
+	private static Pokemon returnCopyOf(String pokemon) throws ClassNotFoundException {
 		Pokemon returnedPokemon;
 		switch (pokemon) {
 			case "Bulbasaur":
