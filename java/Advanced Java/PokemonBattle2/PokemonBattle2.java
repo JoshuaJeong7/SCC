@@ -86,7 +86,7 @@ public class PokemonBattle2 {
             System.out.println("Current pokemon: " + pokemon1.name);
             
             int decision1 = 0;
-            while (decision1 < 1 || decision1 > 2) {
+            while (decision1 < 1 || decision1 > 3) {
                 System.out.println("PLAYER 1: What would you like to do? (enter number)");
                 System.out.println("1) FIGHT");
                 System.out.println("2) SWITCH POKEMON");
@@ -97,9 +97,9 @@ public class PokemonBattle2 {
             if (decision1 == 1)
                 pokemon1.fight(pokemon2);
             else if (decision1 == 2)
-                switchOptions(player1Pokemon);
+                AssignedMethods.switchOptions(player1Pokemon);
             else if (decision1 == 3)
-				itemsOptions(player1Items);
+				AssignedMethods.itemsOptions(player1Items);
             
             
             //Update the turn of this current pokemon (code is provided for you)
@@ -116,21 +116,22 @@ public class PokemonBattle2 {
             System.out.println("Current pokemon: " + pokemon2.name);
             
             if (gameIsRunning) {
-                //Choose whether to fight or heal 10 HP for the current pokemon
-                /** FROM THIS COMMENT TO THE END COMMENT, THE STUDENTS HAVE TO CODE THEMSELVES **/
+
                 int decision2 = 0;
-                while (decision2 < 1 || decision2 > 2) {
+                while (decision2 < 1 || decision2 > 3) {
                     System.out.println("PLAYER 2: What would you like to do? (enter number)");
                     System.out.println("1) FIGHT");
-                    System.out.println("2) HEAL 10 HP");
+                    System.out.println("2) SWITCH POKEMON");
+					System.out.println("3) ITEMS");
                     decision2 = in.nextInt();
                 }
                 
                 if (decision2 == 1)
                     pokemon2.fight(pokemon1);
-                else if (decision2 == 2)
-                    pokemon2.heal(10);
-                /** THIS IS THE END COMMENT */
+                else if (decision1 == 2)
+					AssignedMethods.switchOptions(player2Pokemon);
+				else if (decision1 == 3)
+					AssignedMethods.itemsOptions(player2Items);
             }
             //Update the turn of this current pokemon (code is provided for you)
             pokemon2.updateTurn(pokemon1);
@@ -155,39 +156,5 @@ public class PokemonBattle2 {
 		}
 
 
-	}
-	
-	public String addPokemon(HashMap<String, Pokemon> playerPokemon) {
-		Scanner opt = new Scanner(System.in);
-		int count = 0;
-		
-		String selectedPokemon = ""; //Represents the name, or the "key",
-			// of the current selected pokemon in the map.
-			
-			//YOU WILL HAVE TO RETURN THIS VALUE
-		
-		while (count < 6) {
-			System.out.println("Enter the next pokemon you would like to add.");
-			System.out.println("(NOTE: If you are ONLY able to pick Squirtle, then your code is unfinished!)");
-			
-			String newPokemon = opt.nextLine();
-		}
-		
-		//Finish your code here
-		
-		
-		return selectedPokemon;
-	}
-	
-	public void switchOptions(HashMap<String, Pokemon> playerPokemon) {
-		Scanner opt = new Scanner(System.in);
-		boolean hasSwitched = false;
-		System.out.println("Which pokemon would you like to switch to?");
-		
-		
-	}
-	
-	public void itemOptions(HashMap<String, int> playerItems) {
-		
 	}
 }
