@@ -8,22 +8,33 @@ public class AssignedMethods {
 	 * your own.
 	 * 
 	 */
-	public String addPokemon(HashMap<String, Pokemon> playerPokemon) {
+	public Pokemon addPokemon(HashMap<String, Pokemon> playerPokemon) {
 		Scanner opt = new Scanner(System.in);
 		int count = 0;
 		
-		String selectedPokemon = ""; //Represents the name, or the "key",
+		Pokemon selectedPokemon = null; //Represents the value
 			// of the current selected pokemon in the map.
 		
 		while (count < 6) {
-			System.out.println("Enter the next pokemon you would like to add.");
+			System.out.println("Enter the next pokemon you would like to add. (" + (count + 1) + " / 6)");
 			
 			String newPokemon = opt.nextLine();
-			selectedPokemon = newPokemon;
-			playerPokemon.put(newPokemon, returnCopyOf(newPokemon));
+			selectedPokemon = returnCopyOf(newPokemon);
+			playerPokemon.put(newPokemon, selectedPokemon);
+			count++;
 		}
 		
-		
+		selectedPokemon = null;
+		do {
+			System.out.println("Which pokemon would you like to start with? (Write out the name)");
+			String firstChoice = opt.nextLine();
+			if (playerPokemon.containsKey(firstChoice)) {
+				selectedPokemon = playerPokemon.get(firstChoice);
+			}
+			else {
+				System.out.println("Invalid pokemon name");
+			}
+		} while (selectedPokemon == null):
 		return selectedPokemon;
 	}
 	
