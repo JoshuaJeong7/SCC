@@ -1,11 +1,11 @@
 import java.util.HashMap;
 import java.util.Scanner;
 public class PokemonBattle2 {
-	private HashMap<String, Pokemon> player1Pokemon;
-	private HashMap<String, Pokemon> player2Pokemon;
+	private static HashMap<String, Pokemon> player1Pokemon;
+	private static HashMap<String, Pokemon> player2Pokemon;
 	
-	private HashMap<String, Integer> player1Items;
-	private HashMap<String, Integer> player2Items;
+	private static HashMap<String, Integer> player1Items;
+	private static HashMap<String, Integer> player2Items;
 	
 	public PokemonBattle2() {
 		player1Pokemon = new HashMap<String, Pokemon>();
@@ -46,8 +46,8 @@ public class PokemonBattle2 {
 		System.out.println("Press any other key to proceed");
 		
 		String result = in.next();
-		String currPokemon1 = "";
-		String currPokemon2 = "";
+		Pokemon pokemon1 = null;
+		Pokemon pokemon2 = null;
 		if (result.equals("0")) {
 			player1Pokemon.put("Squirtle", new Squirtle());
 			player1Pokemon.put("Bulbasaur", new Bulbasaur());
@@ -55,7 +55,7 @@ public class PokemonBattle2 {
 
 		}
 		else {
-			currPokemon1 = addPokemon(player1Pokemon);
+			pokemon1 = AssignedMethods.addPokemon(player1Pokemon);
 		}
 		
 		System.out.println("Player 2, pick the pokemon you want to add to your team!");
@@ -70,7 +70,7 @@ public class PokemonBattle2 {
 
 		}
 		else {
-			currPokemon2 = addPokemon(player2Pokemon);
+			pokemon2 = AssignedMethods.addPokemon(player2Pokemon);
 		}
 		
 		
