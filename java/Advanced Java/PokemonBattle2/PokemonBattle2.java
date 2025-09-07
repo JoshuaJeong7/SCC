@@ -1,0 +1,193 @@
+import java.util.HashMap;
+import java.util.Scanner;
+public class PokemonBattle2 {
+	private HashMap<String, Pokemon> player1Pokemon;
+	private HashMap<String, Pokemon> player2Pokemon;
+	
+	private HashMap<String, Integer> player1Items;
+	private HashMap<String, Integer> player2Items;
+	
+	public PokemonBattle2() {
+		player1Pokemon = new HashMap<String, Pokemon>();
+		player2Pokemon = new HashMap<String, Pokemon>();
+		
+		player1Items = new HashMap<String, Integer>();
+		player2Items = new HashMap<String, Integer>();
+		
+		//instantiating all keys + values into player1Items and player2Items
+		
+		player1Items.put("Poké Balls", 0);	  player2Items.put("Poké Balls", 0);
+		player1Items.put("Great Balls", 0);	  player2Items.put("Great Balls", 0);
+		player1Items.put("Heal Potions", 1);	  player2Items.put("Heal Potions", 1);
+		player1Items.put("Berries", 5);	  player2Items.put("Berries", 5);
+		player1Items.put("Revive Potions", 0);	  player2Items.put("Revive Potions", 0);
+		
+		
+	}
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("\n\nThis program is very similar to PokemonBattle (version 1), ");
+		System.out.println("but with a few additions. If you haven't played PokemonBattle, ");
+		System.out.println("find and play it in the Intermediate Java section!\n");
+		
+		System.out.println("The most drastic changes are that both players get access to ");
+		System.out.println("fight with multiple Pokemon at once using a map that pairs ");
+		System.out.println("the pokemon's name with its actual Pokemon object.\n");
+		
+		System.out.println("Additionally, both players get access to an items map that ");
+		System.out.println("pairs the item itself with the count of how many you have.");
+		System.out.println("Have fun with a more accurate Pokemon battle simulator!");
+		System.out.println("As always, try to add more to the code yourself!!");
+		
+		
+		System.out.println("Player 1, pick the pokemon you want to add to your team!");
+		System.out.println("Press 0 to use the default layout (Squirtle, Charmander, Bulbasaur");
+		System.out.println("Press any other key to proceed");
+		
+		String result = in.next();
+		String currPokemon1 = "";
+		String currPokemon2 = "";
+		if (result.equals("0")) {
+			player1Pokemon.put("Squirtle", new Squirtle());
+			player1Pokemon.put("Bulbasaur", new Bulbasaur());
+			player1Pokemon.put("Charmander", new Charmander());
+
+		}
+		else {
+			currPokemon1 = addPokemon(player1Pokemon);
+		}
+		
+		System.out.println("Player 2, pick the pokemon you want to add to your team!");
+		System.out.println("Press 0 to use the default layout (Squirtle, Charmander, Bulbasaur");
+		System.out.println("Press any other key to proceed");
+		
+		result = in.next();
+		if (result.equals("0")) {
+			player2Pokemon.put("Squirtle", new Squirtle());
+			player2Pokemon.put("Bulbasaur", new Bulbasaur());
+			player2Pokemon.put("Charmander", new Charmander());
+
+		}
+		else {
+			currPokemon2 = addPokemon(player2Pokemon);
+		}
+		
+		
+		boolean gameIsRunning = true;
+		
+		while (gameIsRunning) {
+			
+			 System.out.println("\n \n Turn " + pokemon1.turns);
+            
+            ///PLAYER 1's TURN
+            //The entire structure of player 1's turn is provided for you.
+            //You must code the structure for player 2's turn.
+            System.out.println("Current pokemon: " + pokemon1.name);
+            
+            int decision1 = 0;
+            while (decision1 < 1 || decision1 > 2) {
+                System.out.println("PLAYER 1: What would you like to do? (enter number)");
+                System.out.println("1) FIGHT");
+                System.out.println("2) SWITCH POKEMON");
+                System.out.println("3) ITEMS");
+                decision1 = in.nextInt();
+            }
+            
+            if (decision1 == 1)
+                pokemon1.fight(pokemon2);
+            else if (decision1 == 2)
+                switchOptions(player1Pokemon);
+            else if (decision1 == 3)
+				itemsOptions(player1Items);
+            
+            
+            //Update the turn of this current pokemon (code is provided for you)
+            pokemon1.updateTurn(pokemon2);
+            
+            //Check if the opponent pokemon's hp is zero, thus winning the game
+            if (pokemon2.healthLeft <= 0) {
+                System.out.println("Player 2's " + pokemon2.name + " has fainted!");
+                System.out.println("Player 1 wins with " + pokemon1.name + "!");
+                gameIsRunning = false;
+            }
+            
+            ///PLAYER 2'S TURN
+            System.out.println("Current pokemon: " + pokemon2.name);
+            
+            if (gameIsRunning) {
+                //Choose whether to fight or heal 10 HP for the current pokemon
+                /** FROM THIS COMMENT TO THE END COMMENT, THE STUDENTS HAVE TO CODE THEMSELVES **/
+                int decision2 = 0;
+                while (decision2 < 1 || decision2 > 2) {
+                    System.out.println("PLAYER 2: What would you like to do? (enter number)");
+                    System.out.println("1) FIGHT");
+                    System.out.println("2) HEAL 10 HP");
+                    decision2 = in.nextInt();
+                }
+                
+                if (decision2 == 1)
+                    pokemon2.fight(pokemon1);
+                else if (decision2 == 2)
+                    pokemon2.heal(10);
+                /** THIS IS THE END COMMENT */
+            }
+            //Update the turn of this current pokemon (code is provided for you)
+            pokemon2.updateTurn(pokemon1);
+            
+            //Check if the opponent pokemon's hp is zero, thus winning the game
+            //ALSO check if BOTH pokemon have zero hp, thus resulting in a draw
+            ///The students must code the entire if-else block below
+            if (pokemon1.healthLeft <= 0 && pokemon2.healthLeft <= 0) {
+                System.out.println("Both pokemon have fainted!");
+                System.out.println("The game is a draw! Neither player won.");
+                gameIsRunning = false;
+            }
+            else if (pokemon1.healthLeft <= 0) {
+                System.out.println("Player 1's " + pokemon1.name + " has fainted!");
+                System.out.println("Player 2 wins with " + pokemon2.name + "!");
+                gameIsRunning = false;
+            }
+            
+            //Enter a new line for cleaner formatting
+            System.out.println();
+        
+		}
+
+
+	}
+	
+	public String addPokemon(HashMap<String, Pokemon> playerPokemon) {
+		Scanner opt = new Scanner(System.in);
+		int count = 0;
+		
+		String selectedPokemon = ""; //Represents the name, or the "key",
+			// of the current selected pokemon in the map.
+			
+			//YOU WILL HAVE TO RETURN THIS VALUE
+		
+		while (count < 6) {
+			System.out.println("Enter the next pokemon you would like to add.");
+			System.out.println("(NOTE: If you are ONLY able to pick Squirtle, then your code is unfinished!)");
+			
+			String newPokemon = opt.nextLine();
+		}
+		
+		//Finish your code here
+		
+		
+		return selectedPokemon;
+	}
+	
+	public void switchOptions(HashMap<String, Pokemon> playerPokemon) {
+		Scanner opt = new Scanner(System.in);
+		boolean hasSwitched = false;
+		System.out.println("Which pokemon would you like to switch to?");
+		
+		
+	}
+	
+	public void itemOptions(HashMap<String, int> playerItems) {
+		
+	}
+}
