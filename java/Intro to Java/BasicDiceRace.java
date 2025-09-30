@@ -94,7 +94,14 @@ public class BasicDiceRace {
                 
                 /// 1) Prompt the user to roll the die
                 // TYPE YOUR CODE HERE (The students must type everything below)
-                
+                /**+----------------------------------------------------------------+ **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+                /**+----------------------------------------------------------------+ **/
                 
                 /// 2) Roll the die itself and store it in an int value
                 int dieRoll = (int)(Math.random() * 7) + 1;
