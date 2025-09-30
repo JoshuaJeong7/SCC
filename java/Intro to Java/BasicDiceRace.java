@@ -93,7 +93,13 @@ public class BasicDiceRace {
                 
                 
                 /// 1) Prompt the user to roll the die
-                // TYPE YOUR CODE HERE (The students must type everything below)
+                /// Your solution code must:
+                ///    - Prompt the user to roll the die
+                ///    - The user enters anything they want as their input, but the very act
+                ///      of pressing the 'enter' key should be registered by the program before
+                ///      any of the following code should be executed.
+                ///    - (If you're confused by the second point, just take in the next line as
+                ///      user input and don't do anything else with that variable!)
                 /**+----------------------------------------------------------------+ **/
                 /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
                 /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
@@ -113,8 +119,12 @@ public class BasicDiceRace {
                 System.out.println("+-------+");
         
                 /// 3) Determine if the user needs to roll again
-                //Tip 1: You can combine steps 3) and 2)
-                //Tip 2: You need to still ask for the user input when rolling again
+                /// The solution code must:
+                ///    - Figure out whether the user's dieRoll is 7 (the number that means
+                ///      they have to roll again)
+                ///    - Roll the die again, and figure out if that new number is 7 again or not
+                ///    - Use a loop to basically keep rolling the die until it reaches a valid number!
+                //Tip: You need to still ask for the user input when rolling again
                 /**+----------------------------------------------------------------+ **/
                 /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
                 /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
@@ -149,7 +159,12 @@ public class BasicDiceRace {
                     System.out.println("Landed on a backwards tile! Moving backwards");
                 }
             
-                //REPEAT THE STEPS FOR ALL FIVE BACKWARDS STEPS
+                //REPEAT THE PROCESS ABOVE FOR ALL FIVE BACKWARDS STEPS
+                // If you're not sure what that means, in the previous else-if statement
+                // we just checked if the current steps the user is at (yourSteps) is at the
+                // same location as the FIRST backwards tile (backwardsStep1). You must do
+                // this same exact check for ALL 5 backward tiles (backwardsStep2, backwardsStep3,
+                // backwardsStep4, and backwardsStep5)!
                 
                 /**+----------------------------------------------------------------+ **/
                 /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
@@ -164,7 +179,12 @@ public class BasicDiceRace {
                 input.nextLine();
             
                 /// 5) Print the results of the player's turn and update the amount of turns
-            
+                /// The solution MAY (recommended):
+                ///    - Print a continuous line that represents each tile of the entire race
+                ///      track with a symbol. Some sample symbols are below:
+                ///      "-": Regular race tile
+                ///      "@": Location of the player
+                ///      "X": Location of a backwards tile
                 /**+----------------------------------------------------------------+ **/
                 /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
                 /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
