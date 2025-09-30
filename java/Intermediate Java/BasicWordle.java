@@ -51,14 +51,15 @@ public class BasicWordle {
         " 8) To make this game simple, type everything in lowercase ONLY. \n Good luck! \n");
         
         
-        String[] guesses; //FINISH INITIALIZING THE ARRAY!
-        guesses = new String[6];
-        //the following code is what the students have to fill in
+        String[] guesses = new String[6];
         for (int i = 0; i < guesses.length; i++)
             guesses[i] = new String("     ");
         
         Scanner in = new Scanner(System.in);
-        System.out.println("WORD CREATOR: What is the correct word that must be guessed?");
+        System.out.println("WORD CREATOR:\n\n" +
+                           
+         "What is the correct word that must be guessed?");
+     
         String word = "";
         while (word.length() != 5) {
             System.out.println("Enter a 5-letter word to be guessed.");
@@ -77,12 +78,24 @@ public class BasicWordle {
         
         //From here on out, the students see nothing, they must code the entire
         //game by themselves
+
+     
         printAllGuesses(guesses, word);
      
        // Code the whole loop structure for guessing a word!
 
-       // Hint: the printAllGuesses method handles all the color logic FOR you.
-       // The only work you have to do is if the guessed word equals the real word!
+       // Hint: the printAllGuesses method handles all the color logic FOR you. Use it!
+       // The only ORIGINAL work you have to do is check if the guessed word equals the real word!
+
+       /**+----------------------------------------------------------------+ **/
+       /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+       /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+       /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+       /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+       /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+       /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+       /**+----------------------------------------------------------------+ **/
+
         
         System.out.println("GAME OVER - The letter was " + word);
     }
