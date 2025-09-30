@@ -69,6 +69,8 @@ public class OddCharacterOut {
 		///STUDENTS: YOU WILL CODE THE REST OF THE GAME STARTING FROM THIS POINT!
 		// Here are some pointers to help you get started:
 		//	- "the character" that the player is finding is stored in the variable 'input'.
+		//	- The user is inputting an INTEGER, which states which index they think the
+		//	  character 'input' is located at within the randomly generated line.
 		//	- Read the rules outlined in the above print statements to determine 
 		//	  when the player wins and when the player loses.
 
