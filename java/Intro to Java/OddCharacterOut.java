@@ -72,7 +72,14 @@ public class OddCharacterOut {
 		//	- Read the rules outlined in the above print statements to determine 
 		//	  when the player wins and when the player loses.
 
-		
+		/**+----------------------------------------------------------------+ **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /** ###    ----    ####  CODE THIS PART YOURSELF  ####    ----    ### **/
+        /**+----------------------------------------------------------------+ **/
 	}
 	
 	
