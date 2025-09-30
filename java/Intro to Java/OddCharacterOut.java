@@ -39,34 +39,40 @@ public class OddCharacterOut {
 		" -Be careful when using space as your character, as it is possible " +
 		" for space to be the last character in the line and thus become invisible." +
 		" \n \n Good luck! \n");
-		
 
-		
-		
-		
 		Scanner reader = new Scanner(System.in);
-		System.out.println("Choose the character that you want to find: ");
+		System.out.println("\nSAMPLE GAME DEMO (If you're confused on rules, look at this game example!");
+		System.out.println("THE GENERATED LINE: \n");
+		System.out.println("3%ignr4t9T$h");
+		System.out.println("In which index is the character \'g\' found?");
+		System.out.println("[user input: 3]");
+		System.out.println("Congratulations! You found the index!!!");
+		System.out.println("\n PRESS ENTER IF YOU HAVE READ AND UNDERSTOOD THE RULES OF THIS GAME");
+		reader.nextLine();
+		
+		
+		System.out.println(">>>>> CREATING THE GAME <<<<<");
+		System.out.println("Choose the character that you want the player of the game to find: ");
 		///NOTE TO STUDENTS: The variable that represents the input MUST be a char data type.
 		char input = reader.nextLine().charAt(0); //THE STUDENTS code this line in
 		
 		System.out.println("How long do you want your line of characters to be?");
 		int length = reader.nextInt();
-		
+
+		System.out.println(">>>>> PLAYING THE GAME <<<<<");
 		System.out.println(" \n \n THE GENERATED LINE: \n");
 		///NOTE TO STUDENTS: PAY ATTENTION TO THIS STRING VARIABLE!! IT STORES THE LINE OF CHARACTERS!!
 		String randomLine = generateRandomLine(input, length);
-		
 		System.out.println(randomLine);
+
 		
-		System.out.println("\n In which index is the character \'" + 
-								input + "\' found?");
-		int indexGuess = reader.nextInt();
+		///STUDENTS: YOU WILL CODE THE REST OF THE GAME STARTING FROM THIS POINT!
+		// Here are some pointers to help you get started:
+		//	- "the character" that the player is finding is stored in the variable 'input'.
+		//	- Read the rules outlined in the above print statements to determine 
+		//	  when the player wins and when the player loses.
+
 		
-		//The following is all the algorithm that they have to write themselves
-		if (indexGuess == randomLine.indexOf(input + ""))
-			System.out.println("Congratulations! You found the index!!!");
-		else
-			System.out.println("Sorry, the correct index was " + randomLine.indexOf(input + "") );
 	}
 	
 	
@@ -93,7 +99,7 @@ public class OddCharacterOut {
 	
 	/**
 	 * NOTE TO STUDENTS: You do not have to worry about this code. All
-	 * this function does is do the encryption of ONE letter. You may try to
+	 * this function does is generate the line of random characters. You may try to
 	 * understand it if you want, but it is not necessary to edit 
 	 * this function in any other way.
 	 */
