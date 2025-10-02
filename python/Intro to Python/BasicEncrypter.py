@@ -5,22 +5,20 @@ print("This program takes in a string and encrypts it," +
       " 'Z' becomes 'B'. \n Non-letters (numbers, symbols, etc.)" +
       " will not be shifted at all. \n \n")
 print("Enter your 5-letter word to encrypt:")
-word =
+word = #Finish the code here (take in the user input for a 5-letter word)
 
-letter1 = 
-letter2 = 
-letter3 = 
-letter4 = 
-letter5 = 
+letter1 = #Finish the code here (get the first letter of your 'word' variable)
+letter2 = #Finish the code here (get the second letter of your 'word' variable)
+letter3 = #Finish the code here (get the third letter of your 'word' variable)
+letter4 = #Finish the code here (get the fourth letter of your 'word' variable)
+letter5 = #Finish the code here (get the fifth letter of your 'word' variable)
 
-print("The encrypted word:", end=' ')
+print("The encrypted word:")
 encryptLetterAndPrint(letter1)
-encryptLetterAndPrint(letter2)
-encryptLetterAndPrint(letter3)
-encryptLetterAndPrint(letter4)
-encryptLetterAndPrint(letter5)
 
-print()
+#Encrypt the letter and print for the rest of the other four letters
+
+
 
 
 # Don't worry about this code, it just encrypts a letter.
@@ -31,5 +29,5 @@ def encryptLetterAndPrint(word):
         letter = chr(ord(letter) + 2)
         if (('A' < letter < 'a') or (letter > 'Z' and letter > 'z')):
             letter = chr(ord(letter) - 26)
-    print(letter, end='')
+    print(letter)
 
