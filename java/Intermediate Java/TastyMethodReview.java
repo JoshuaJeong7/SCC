@@ -1,7 +1,7 @@
 public class TastyMethodReview {
     //You do not need to do anything in main.
     public static void main(String[] args) {
-        String[] foodItems = ["pizza", "hamburger", "pasta", "cheese"]; //Feel free to change this array to any amount of values you want to see!
+        String[] foodItems = {"pizza", "hamburger", "pasta", "cheese"}; //Feel free to change this array to any amount of values you want to see!
         
         System.out.println("Before makeTasty: ");
         printArray(foodItems);
