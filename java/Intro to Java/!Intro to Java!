@@ -1,4 +1,7 @@
 Here are the following projects in Intro to Java, in order of difficulty:
+
+EasyCalculator.java (Just working with operations and at most functions from the Math class)
+
 BasicRPS.java (Coding with if-statements, input, and possibly random)
 IntermediateRPS.java (Coding with LOOPS, if-statements, input, and possibly random)
 
