@@ -43,20 +43,42 @@ public class AssignedMethods {
 		} while (selectedPokemon == null);
 		return selectedPokemon;
 	}
-	
+
+	/*
+		In this method, you are switching which Pokemon is currently active, just like in real Pokemon.
+
+		NOTE: If the Pokemon you want to switch to has already fainted (i.e. for the Pokemon value inside
+				the map, that corresponding Pokemon object has a HP less than or equal to 0),
+				then you will be prevented from switching to that pokemon.
+	*/
 	public static void switchOptions(HashMap<String, Pokemon> playerPokemon) {
 		Scanner opt = new Scanner(System.in);
 		boolean hasSwitched = false;
 		System.out.println("Which pokemon would you like to switch to?");
 		
-		
+		//FINISH YOUR CODE HERE
 		
 	}
-	
+
+	/*
+		In this method, you pick na item that you want to use on the current Pokemon.
+		First, select the item you want to use.
+		Then, check if there are enough items left in stock (i.e. if the integer value associated
+				with that item is greater than 0).
+		Finally, if it is, do the desired task of that specific item (i.e. a Heal Potion will heal
+				your current pokemon.)
+	*/
 	public static void itemsOptions(HashMap<String, Integer> playerItems) {
-		
+		//FINISH YOUR CODE HERE
 	}
-	
+
+	/*
+		Good news and bad news!
+		Good news: This method is super easy! If you create a new Pokemon, just add that
+		           new Pokemon to this method in the exact way that I do it and this is complete!
+		Bad news: You have to update this method every time you make a new Pokemon, and there's
+		           no easy way to do it all at once.
+	*/
 	private static Pokemon returnCopyOf(String pokemon) throws ClassNotFoundException {
 		Pokemon returnedPokemon;
 		switch (pokemon) {
