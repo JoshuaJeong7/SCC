@@ -129,9 +129,18 @@ public class DefuseAgent {
         String msg3 = "Here are all of the things you can do to question your client:\n" +
                       "\t- Ask the client for the severity of all 6 crimes (Minor = 10+, " +
                       "Serious = 100+, Grand = 1,000+, Massacre = 10,000+, Warfare = 100,000+, " +
-                      "CATASTROPHIC = 1,000,000+)\n" +
+                      "CATASTROPHIC = 1,000,000+)\n\n" +
+
                       "\t- Guess three letters contained somewhere in the client's crime list, " +
-                      "and they will tell you whether the letter do or do not exist FOR EACH crime\n" +
-                      "\t- Guess a number for the severity of the crime";
+                      "and they will tell you whether the letter do or do not exist FOR EACH crime\n\n" +
+
+                      "\t- Guess a number for the severity of the crime, and for ALL 6 CRIMES they " +
+                      "will tell you whether that number is WAY too low, too low, too high, WAY too high, " +
+                      "or exactly accurate\n\n" +
+
+                      "\t- DEMAND a word contained in ONE of the client's crimes, and they will " +
+                      "randomly pick one word out of their crimes list to share\n\n" +
+
+                      "\t- ";
     }
 }
