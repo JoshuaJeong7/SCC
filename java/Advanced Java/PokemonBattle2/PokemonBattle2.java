@@ -135,26 +135,39 @@ public class PokemonBattle2 {
             }
             //Update the turn of this current pokemon (code is provided for you)
             pokemon2.updateTurn(pokemon1);
-            
+
             //Check if the opponent pokemon's hp is zero, thus winning the game
             //ALSO check if BOTH pokemon have zero hp, thus resulting in a draw
             ///The students must code the entire if-else block below
-            if (pokemon1.healthLeft <= 0 && pokemon2.healthLeft <= 0) {
+            if (playerLost(player1Pokemon) && playerLost(player2Pokemon)) {
                 System.out.println("Both pokemon have fainted!");
                 System.out.println("The game is a draw! Neither player won.");
                 gameIsRunning = false;
             }
-            else if (pokemon1.healthLeft <= 0) {
+            else if (playerLost(player2Pokemon)) {
                 System.out.println("Player 1's " + pokemon1.name + " has fainted!");
                 System.out.println("Player 2 wins with " + pokemon2.name + "!");
                 gameIsRunning = false;
             }
-            
+            else if (playerLost(player1Pokemon)) {
+                System.out.println("Player 1's " + pokemon1.name + " has fainted!");
+                System.out.println("Player 2 wins with " + pokemon2.name + "!");
+                gameIsRunning = false;
+            }
             //Enter a new line for cleaner formatting
             System.out.println();
         
 		}
 
 
+	}
+
+	public static boolean playerLost(HashMap<String, Pokemon> playerPokemon) {
+		for (Pokemon thisPokemon : playerPokemon.values()) {
+			if (thisPokemon.healthLeft > 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 }
