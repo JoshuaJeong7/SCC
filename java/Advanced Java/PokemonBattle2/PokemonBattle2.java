@@ -140,20 +140,26 @@ public class PokemonBattle2 {
             //ALSO check if BOTH pokemon have zero hp, thus resulting in a draw
             ///The students must code the entire if-else block below
             if (playerLost(player1Pokemon) && playerLost(player2Pokemon)) {
-                System.out.println("Both pokemon have fainted!");
                 System.out.println("The game is a draw! Neither player won.");
                 gameIsRunning = false;
             }
             else if (playerLost(player2Pokemon)) {
-                System.out.println("Player 1's " + pokemon1.name + " has fainted!");
                 System.out.println("Player 2 wins with " + pokemon2.name + "!");
                 gameIsRunning = false;
             }
             else if (playerLost(player1Pokemon)) {
-                System.out.println("Player 1's " + pokemon1.name + " has fainted!");
-                System.out.println("Player 2 wins with " + pokemon2.name + "!");
+                System.out.println("Player 1 wins with " + pokemon1.name + "!");
                 gameIsRunning = false;
             }
+
+			if (pokemon1.healthLeft <= 0) {
+				System.out.println("Player 1's " + pokemon1.name + " has fainted!");
+				pokemon1 = AssignedMethods.addPokemon(player1Pokemon);
+			}
+			if (pokemon2.healthLeft <= 0) {
+				System.out.println("Player 2's " + pokemon2.name + " has fainted!");
+				pokemon2 = AssignedMethods.addPokemon(player2Pokemon);
+			}
             //Enter a new line for cleaner formatting
             System.out.println();
         
