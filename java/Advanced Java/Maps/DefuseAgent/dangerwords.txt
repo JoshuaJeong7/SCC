@@ -31,3 +31,4 @@ targetted-weapons-strike 20000
 supernatural-disaster 5000000
 vehicular-disruption 60
 propaganda 25
+war-against-humanity 3500000
