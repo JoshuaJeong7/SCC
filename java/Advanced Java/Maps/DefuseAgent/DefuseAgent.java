@@ -109,7 +109,7 @@ public class DefuseAgent {
 				
 				System.out.println("Number of questions available: " + questionsLeft);
 				System.out.println("How would you like to interrogate your client?");
-				System.out.println("1: Ask the severity level of all their crimes");
+				System.out.println("1: Ask the severity CLASSIFICATION of all their crimes");
 				System.out.println("2: Guess five letters contained in each crime");
 				System.out.println("3: Guess a number for the severity of each crimes");
 				System.out.println("4: Demand two word contained anywhere in their crimes list");
@@ -319,3 +319,4 @@ public class DefuseAgent {
          user.nextLine();
     }
 }
+
