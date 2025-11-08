@@ -15,6 +15,15 @@ public class AssignedMethods {
      *            - To ensure the number is unique, continuously
      *              generate random numbers UNTIL the number you generate
      *              is no longer in the Set.
+	 * @param low 	The lowest possible number that could be randomly generated.
+	 * @param high	The highest possible number that could be randomly generated.
+	 * Ex: if low = 20 and high = 35
+	 * The random number generated: 21, 20, 34, 32, 27, 31, etc.
+	 * Notice how all of these numbers are ONLY within the range of 20 to 35, because
+	 * those numbers are the values for low and high!
+	 *
+	 * @param n		The AMOUNT of numbers you are creating in total.
+	 * For example, if n = 6, you're returning a HashSet with 6 randomly generated UNIQUE numbers.
      */
     public static HashSet<Integer> randomUniqueNumbers(int n, int low, int high) {
         return null;
@@ -290,3 +299,4 @@ public class AssignedMethods {
 		in.nextLine();
 	}
 }
+
