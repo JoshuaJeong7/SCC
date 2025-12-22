@@ -1,0 +1,12 @@
+MAIN FILE (MUST RUN THIS FILE TO EXECUTE THE WHOLE PROGRAM):
+TimeLab.java (This file is already completed for you! If you want a challenge, try to read through and understand its other methods!)
+
+REQUIRED FILES (MUST INCLUDE THESE FILES TO COMPILE):
+SelectionSortIterative.java
+InsertionSortIterative.java
+MergeSortRecursive.java
+
+FILES COMPLETED FOR YOU:
+IndivSorter.java
+SortHelper.java
+TimeLab.java (explained above)
