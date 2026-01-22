@@ -42,7 +42,12 @@ public class TwentyElementList {
     
     //NOTE 2: Yes, changing the .root variable on tempRoot will reflect those same changes to the original root,
     //because of Pass By Reference!
-    
+
+    System.out.println("CHECKING IF \"GOLD\" IN THE LIST");
+    if (isGoldInList(root))
+      System.out.println("EUREKA!!! WE FOUND GOLD!");
+    else
+      System.out.println("Darn, no gold. Better luck next time!");
   }
 }
 
