@@ -1,3 +1,5 @@
+//NOTE: If you are copying this into Programiz, move this class definition to the bottom of the file!
+//Then your class errors should be fixed!
 class ElementList {
   public String message;
   public ElementList next;
