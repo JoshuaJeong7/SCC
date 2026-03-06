@@ -16,5 +16,25 @@ public class NBAShowdownExtended {
 }
 
 class freeThrowVersus extends Comparator<NBAPlayer> {
+    // Write a compare() method that does the following:
+    // - Find and return the difference between both players’ free throw count. (first - second)
+    public int compare(NBAPlayer first, NBAPlayer second) {
+        //Finish your code here!
 
+        
+        return 0;
+    }
 }
+
+class winsVersus extends Comparator<NBAPlayer> {
+    // Write a compare() method that does the following:
+    // - Find and return the difference between both players’ games won. (first - second)
+    public int compare(NBAPlayer first, NBAPlayer second) {
+        //Finish your code here!
+
+        
+        return 0;
+    }
+}
+
+//Write your own Comparator<NBAPlayer> class to compare the NBA Players by a different metric!
