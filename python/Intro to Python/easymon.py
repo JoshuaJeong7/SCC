@@ -1,3 +1,4 @@
+import random
 # If you've seen Intermediate/Advanced Java's PokemonBattle, this is an easier
 # version of that code!
 # Both you (P1) and P2 get identical "Pokemon" with identical moves, and you
