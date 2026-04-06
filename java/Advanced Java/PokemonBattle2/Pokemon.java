@@ -35,6 +35,10 @@ public class Pokemon {
                                     //        NOTE 2: If defense is negative,
                                     //        this Pokemon will take EXTRA damage.
                                     //        See getHit() for more details
+
+    public boolean isParalyzed;     // Exclusive to Pikachu/other Electric types:
+                                    //  If true, will prevent the opponent from
+                                    //  using a turn and immediately turn false.
     
     
     public Pokemon() {
@@ -81,6 +85,11 @@ public class Pokemon {
     
     
     public void updateTurn(Pokemon other) {
+        if (isParalyzed) {
+            System.out.println(this.name + " is paralyzed! Can't act for one turn");
+            isParalyzed = false;
+            return;
+        }
         turns++;
     }
     
