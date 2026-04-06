@@ -1,14 +1,14 @@
 /**
  * PART OF THE PokemonBattle.java PROGRAM
  * 
- * -BASIC TEMPLATE FOR THIS CLASS
+ * -FULLY COMPLETED CLASS
  */
 public class Pokemon {
     /**
-     * NOTE TO STUDENTS: This class is technically completed, but use it as a
+     * NOTE TO STUDENTS: This class is fully completed, but use it as a
      * reference for how you should code your other classes in this program!
-     * You are also more than encouraged to add new field variables and methods
-     * to this class.
+     * This class also provides every tool you should know if you choose
+     * to extend from this class.
      */
     
     public int turns; //This variable is never used in this default class,
@@ -35,6 +35,10 @@ public class Pokemon {
                                     //        NOTE 2: If defense is negative,
                                     //        this Pokemon will take EXTRA damage.
                                     //        See getHit() for more details
+
+    public boolean isParalyzed;     // Exclusive to Pikachu/other Electric types:
+                                    //  If true, will prevent the opponent from
+                                    //  using a turn and immediately turn false.
     
     
     public Pokemon() {
@@ -57,8 +61,7 @@ public class Pokemon {
         
         defense = startDefense;
     }
-
-    //This method will get overwritten by subclasses anyway.
+    
     public void fight(Pokemon other) {
         other.getHit((int)(15 * power));
     }
@@ -82,6 +85,11 @@ public class Pokemon {
     
     
     public void updateTurn(Pokemon other) {
+        if (isParalyzed) {
+            System.out.println(this.name + " is paralyzed! Can't act for one turn");
+            isParalyzed = false;
+            return;
+        }
         turns++;
     }
     
