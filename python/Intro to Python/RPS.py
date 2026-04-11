@@ -8,7 +8,7 @@ such as making 5 decisions that the user and opponent have to pick from! Happy c
 while True:
 
   # Checking if the user wants to keep playing. If not, then end the game immediately.
-  is_quitting = int(input("\nWould you like to play Rock-Paper-Scissors?  (0 for no, any other number for yes))")
+  is_quitting = int(input("\nWould you like to play Rock-Paper-Scissors?  (0 for no, any other number for yes)"))
   if is_quitting == 0:
     break
 
