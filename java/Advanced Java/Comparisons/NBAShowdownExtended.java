@@ -1,4 +1,4 @@
-//NOTE: If you are copying this into Programiz, move this class definition to the bottom of the file!
+//NOTE: If you are copying this into Programiz, move all class definitions to the bottom of the file!
 //Then your class errors should be fixed!
 class NBAPlayer {
     int freeThrows;
@@ -38,6 +38,7 @@ class yourOwnChoice extends Comparator<NBAPlayer> {
     //Rename this class name to "___Versus", where ___ is replaced with your metric of comparison.
     
     //Write the compare(first, second) method over here! Copy the format of your previous two Comparator classes!
+    // - Find and return the difference between both players' [CUSTOM STATISTIC]. (first - second)
 }
 
 public class NBAShowdownExtended {
