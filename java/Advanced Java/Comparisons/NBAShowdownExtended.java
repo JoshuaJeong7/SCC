@@ -1,3 +1,5 @@
+//Remember to import Comparator! NOTE: Comparable does NOT need imports!
+import ___
 //NOTE: If you are copying this into Programiz, move all class definitions to the bottom of the file!
 //Then your class errors should be fixed!
 class NBAPlayer {
