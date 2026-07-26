@@ -52,11 +52,11 @@ public class BookWorm {
 
 		System.out.println("Array List Without Sorting: \n" + bookList);
 		
-		Collections.sort(bookList);
+		System.out.println("Delete this print statement and replace it with a line that uses Collections.sort!");
 		System.out.println("Array List Sorted By Genre (alphabetical): \n" + bookList);
 
 		System.out.println("REMEMBER TO CREATE YOUR Comparator<Book> CLASS!!!!");
-		Collections.sort(bookList, ADD_COMPARATOR_OBJECT_HERE);
+		System.out.println("Delete this print statement and replace it with a line that uses Collections.sort!");
 		System.out.println("Array List Sorted By Page Count (ascending order): \n" + bookList);
 	}
 }
