@@ -10,6 +10,7 @@ class NBAPlayer {
         freeThrows = f;
         gamesWon = g;
         totalScore = s;
+        System.out.println("Feel free to add your own custom statistics to compare between the two NBA players!");
     }
 }
 
@@ -48,6 +49,10 @@ public class NBAShowdownExtended {
         NBAPlayer stephenCurry = new NBAPlayer( (int)(Math.random() * 50 + 150), (int)(Math.random() * 20 + 80, (int)(Math.random() * 150 + 300) );
         NBAPlayer lebronJames = new NBAPlayer( (int)(Math.random() * 50 + 150), (int)(Math.random() * 20 + 80, (int)(Math.random() * 150 + 300) );
 
+        System.out.printf("Stephen Curry\'s statistics: %d Free Throws, %d Games Won, %d Total Score\n", stephenCurry.freeThrows, stephenCurry.gamesWon, stephenCurry.totalScore);
+        System.out.printf("Lebron James\'s statistics: %d Free Throws, %d Games Won, %d Total Score\n", lebronJames.freeThrows, lebronJames.gamesWon, lebronJames.totalScore);
+        System.out.println("Feel free to update this statistics print statement to include your own custom statistics!");
+        
         FreeThrowVersus freeThrow = new FreeThrowVersus()
         WinsVersus win = new WinsVersus()
 
